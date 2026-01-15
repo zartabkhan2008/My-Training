@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Control Flow Explained</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #FF5722;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #FF5722;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Control Flow</h1>
+    <p>Understand conditional statements and loops with examples</p>
+  </header>
+
+  <div class="container">
+    <!-- IF STATEMENT -->
+    <div class="card">
+      <h2>if Statement</h2>
+      <p><strong>Definition:</strong> Executes a block of code if a specified condition is true.</p>
+      <pre>
+// Example
+let age = 18;
+if (age >= 18) {
+  console.log("You are an adult");
+}
+      </pre>
+      <p><strong>Explanation:</strong> The <code>if</code> statement checks a condition. If true, the code inside runs.</p>
+    </div>
+
+    <!-- ELSE STATEMENT -->
+    <div class="card">
+      <h2>else Statement</h2>
+      <p><strong>Definition:</strong> Executes a block of code if the <code>if</code> condition is false.</p>
+      <pre>
+// Example
+let age = 16;
+if (age >= 18) {
+  console.log("You are an adult");
+} else {
+  console.log("You are a minor");
+}
+      </pre>
+      <p><strong>Explanation:</strong> The <code>else</code> block provides an alternative path when the condition fails.</p>
+    </div>
+
+    <!-- ELSE IF STATEMENT -->
+    <div class="card">
+      <h2>else if Statement</h2>
+      <p><strong>Definition:</strong> Allows multiple conditions to be checked sequentially.</p>
+      <pre>
+// Example
+let score = 75;
+if (score >= 90) {
+  console.log("Grade A");
+} else if (score >= 75) {
+  console.log("Grade B");
+} else {
+  console.log("Grade C");
+}
+      </pre>
+      <p><strong>Explanation:</strong> <code>else if</code> lets you test multiple conditions in order.</p>
+    </div>
+
+    <!-- SWITCH STATEMENT -->
+    <div class="card">
+      <h2>switch Statement</h2>
+      <p><strong>Definition:</strong> Executes one block of code based on matching a value.</p>
+      <pre>
+// Example
+let day = "Monday";
+switch(day) {
+  case "Monday":
+    console.log("Start of the week");
+    break;
+  case "Friday":
+    console.log("Weekend is near");
+    break;
+  default:
+    console.log("Midweek day");
+}
+      </pre>
+      <p><strong>Explanation:</strong> <code>switch</code> is useful when checking one variable against many possible values.</p>
+    </div>
+
+    <!-- FOR LOOP -->
+    <div class="card">
+      <h2>for Loop</h2>
+      <p><strong>Definition:</strong> Repeats a block of code a specific number of times.</p>
+      <pre>
+// Example
+for (let i = 1; i <= 5; i++) {
+  console.log("Iteration " + i);
+}
+      </pre>
+      <p><strong>Explanation:</strong> The <code>for</code> loop is commonly used when the number of iterations is known.</p>
+    </div>
+
+    <!-- WHILE LOOP -->
+    <div class="card">
+      <h2>while Loop</h2>
+      <p><strong>Definition:</strong> Repeats a block of code while a condition is true.</p>
+      <pre>
+// Example
+let count = 1;
+while (count <= 3) {
+  console.log("Count is " + count);
+  count++;
+}
+      </pre>
+      <p><strong>Explanation:</strong> The <code>while</code> loop runs until the condition becomes false.</p>
+    </div>
+
+    <!-- DO-WHILE LOOP -->
+    <div class="card">
+      <h2>do-while Loop</h2>
+      <p><strong>Definition:</strong> Executes a block of code once, then repeats while the condition is true.</p>
+      <pre>
+// Example
+let num = 1;
+do {
+  console.log("Number is " + num);
+  num++;
+} while (num <= 3);
+      </pre>
+      <p><strong>Explanation:</strong> The <code>do-while</code> loop guarantees the code runs at least once, even if the condition is false initially.</p>
+    </div>
+  </div>
+</body>
+</html>

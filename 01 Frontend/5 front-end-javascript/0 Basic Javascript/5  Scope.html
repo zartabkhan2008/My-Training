@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Scope Explained</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #009688;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #009688;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Scope</h1>
+    <p>Understand different types of scope with examples</p>
+  </header>
+
+  <div class="container">
+    <!-- GLOBAL SCOPE -->
+    <div class="card">
+      <h2>Global Scope</h2>
+      <p><strong>Definition:</strong> Variables declared outside any function or block are in the global scope and accessible everywhere.</p>
+      <pre>
+// Example
+var globalVar = "I am global";
+
+function showGlobal() {
+  console.log(globalVar); // Accessible here
+}
+
+showGlobal();
+console.log(globalVar); // Accessible here too
+      </pre>
+      <p><strong>Explanation:</strong> Global variables can be accessed from any part of the program. Overusing them can cause conflicts.</p>
+    </div>
+
+    <!-- LOCAL SCOPE -->
+    <div class="card">
+      <h2>Local Scope</h2>
+      <p><strong>Definition:</strong> Variables declared inside a function are local to that function and cannot be accessed outside.</p>
+      <pre>
+// Example
+function localExample() {
+  let localVar = "I am local";
+  console.log(localVar); // Accessible here
+}
+
+localExample();
+// console.log(localVar); ❌ Error: not defined
+      </pre>
+      <p><strong>Explanation:</strong> Local variables exist only within the function where they are declared.</p>
+    </div>
+
+    <!-- BLOCK SCOPE -->
+    <div class="card">
+      <h2>Block Scope</h2>
+      <p><strong>Definition:</strong> Variables declared with <code>let</code> or <code>const</code> inside a block (<code>{ }</code>) are only accessible within that block.</p>
+      <pre>
+// Example
+{
+  let blockVar = "Inside block";
+  console.log(blockVar); // Accessible here
+}
+// console.log(blockVar); ❌ Error: not defined
+      </pre>
+      <p><strong>Explanation:</strong> Block scope helps prevent variables from leaking outside of loops, conditionals, or other blocks.</p>
+    </div>
+
+    <!-- LEXICAL SCOPE -->
+    <div class="card">
+      <h2>Lexical Scope</h2>
+      <p><strong>Definition:</strong> Inner functions can access variables from their outer functions due to lexical scoping.</p>
+      <pre>
+// Example
+function outer() {
+  let outerVar = "Outer variable";
+  
+  function inner() {
+    console.log(outerVar); // Accessible due to lexical scope
+  }
+  
+  inner();
+}
+
+outer();
+      </pre>
+      <p><strong>Explanation:</strong> Lexical scope means functions remember the scope in which they were created, allowing inner functions to access outer variables.</p>
+    </div>
+  </div>
+</body>
+</html>
