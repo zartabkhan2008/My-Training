@@ -3,45 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Data Types</title>
+  <title>JavaScript Data Types: Primitive vs Non-Primitive</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
       background: #f4f4f9;
       color: #333;
     }
     header {
-      background: #4CAF50;
+      background: #673AB7;
       color: white;
       padding: 1rem;
       text-align: center;
     }
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
       padding: 20px;
     }
+    .section-title {
+      background: #EDE7F6;
+      padding: 10px;
+      border-left: 5px solid #673AB7;
+      margin-top: 30px;
+      border-radius: 5px;
+    }
     .card {
       background: white;
+      margin-bottom: 20px;
       padding: 20px;
-      margin: 15px 0;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #4CAF50;
+      color: #673AB7;
     }
-    code {
-      background: #eee;
-      padding: 2px 5px;
-      border-radius: 4px;
-      font-family: monospace;
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
     }
     @media (max-width: 600px) {
       body {
-        font-size: 14px;
+        font-size: 16px;
       }
       .card {
         padding: 15px;
@@ -52,66 +61,104 @@
 <body>
   <header>
     <h1>JavaScript Data Types</h1>
-    <p>Understanding Primitive and Non-Primitive Data Types</p>
+    <p>Primitive vs Non-Primitive with examples</p>
   </header>
 
   <div class="container">
-    <!-- Primitive Types -->
-    <div class="card">
-      <h2>1. String</h2>
-      <p>Represents text enclosed in quotes.</p>
-      <code>
-        let name = "Zartab";<br>
-        console.log(typeof name); // string
-      </code>
+    <!-- PRIMITIVE TYPES -->
+    <div class="section-title">
+      <h2>Primitive Data Types</h2>
+      <p>These are the most basic data types in JavaScript. They are immutable and stored by value.</p>
     </div>
 
+    <!-- STRING -->
     <div class="card">
-      <h2>2. Number</h2>
-      <p>Represents numeric values (integer or floating-point).</p>
-      <code>
-        let age = 25;<br>
-        let price = 99.99;<br>
-        console.log(typeof age); // number
-      </code>
+      <h2>String</h2>
+      <p><strong>Definition:</strong> Represents text enclosed in quotes.</p>
+      <pre>
+let greeting = "Hello World";
+console.log(greeting); // Hello World
+      </pre>
+      <p><strong>Explanation:</strong> Strings are used to store and manipulate text.</p>
     </div>
 
+    <!-- NUMBER -->
     <div class="card">
-      <h2>3. Boolean</h2>
-      <p>Represents logical values: <code>true</code> or <code>false</code>.</p>
-      <code>
-        let isStudent = true;<br>
-        console.log(typeof isStudent); // boolean
-      </code>
+      <h2>Number</h2>
+      <p><strong>Definition:</strong> Represents numeric values (integers, floats).</p>
+      <pre>
+let age = 25;
+let price = 99.99;
+console.log(age + price); // 124.99
+      </pre>
+      <p><strong>Explanation:</strong> JavaScript uses one <code>Number</code> type for all numeric values.</p>
     </div>
 
+    <!-- BOOLEAN -->
     <div class="card">
-      <h2>4. Undefined</h2>
-      <p>A variable declared but not assigned has the value <code>undefined</code>.</p>
-      <code>
-        let x;<br>
-        console.log(typeof x); // undefined
-      </code>
+      <h2>Boolean</h2>
+      <p><strong>Definition:</strong> Represents logical values: true or false.</p>
+      <pre>
+let isActive = true;
+let isLoggedIn = false;
+console.log(isActive && isLoggedIn); // false
+      </pre>
+      <p><strong>Explanation:</strong> Booleans are used in conditions and logical operations.</p>
     </div>
 
+    <!-- NULL -->
     <div class="card">
-      <h2>5. Null</h2>
-      <p>Represents an intentional "empty" value.</p>
-      <code>
-        let data = null;<br>
-        console.log(typeof data); // object (special case)
-      </code>
+      <h2>Null</h2>
+      <p><strong>Definition:</strong> Represents intentional absence of value.</p>
+      <pre>
+let data = null;
+console.log(data); // null
+      </pre>
+      <p><strong>Explanation:</strong> Explicitly assigned to indicate "no value".</p>
     </div>
 
+    <!-- UNDEFINED -->
     <div class="card">
-      <h2>6. Symbol</h2>
-      <p>Represents unique identifiers.</p>
-      <code>
-        let sym = Symbol("id");<br>
-        console.log(typeof sym); // symbol
-      </code>
+      <h2>Undefined</h2>
+      <p><strong>Definition:</strong> A variable declared but not assigned a value.</p>
+      <pre>
+let result;
+console.log(result); // undefined
+      </pre>
+      <p><strong>Explanation:</strong> Means the variable exists but has no value yet.</p>
     </div>
 
+    <!-- NON-PRIMITIVE TYPES -->
+    <div class="section-title">
+      <h2>Non-Primitive Data Types</h2>
+      <p>These are complex data types. They are mutable and stored by reference.</p>
+    </div>
+
+    <!-- OBJECT -->
     <div class="card">
-      <h2>7. BigInt</h2>
-      <p>Used for very large integers beyond
+      <h2>Object</h2>
+      <p><strong>Definition:</strong> A collection of key-value pairs.</p>
+      <pre>
+let person = {
+  name: "Alice",
+  age: 30,
+  isStudent: false
+};
+console.log(person.name); // Alice
+      </pre>
+      <p><strong>Explanation:</strong> Objects store structured data. Properties can be accessed via dot or bracket notation.</p>
+    </div>
+
+    <!-- ARRAY -->
+    <div class="card">
+      <h2>Array</h2>
+      <p><strong>Definition:</strong> An ordered list of values, indexed starting at 0.</p>
+      <pre>
+let colors = ["red", "green", "blue"];
+console.log(colors[1]); // green
+      </pre>
+      <p><strong>Explanation:</strong> Arrays hold multiple values and provide useful methods like <code>push()</code>, <code>map()</code>, etc.</p>
+    </div>
+  </div>
+</body>
+</html>
