@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Arrays for Beginners</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #3F51B5;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #3F51B5;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Arrays</h1>
+    <p>A beginner-friendly guide with examples</p>
+  </header>
+
+  <div class="container">
+    <!-- WHAT IS AN ARRAY -->
+    <div class="card">
+      <h2>What is an Array?</h2>
+      <p><strong>Definition:</strong> An array is a special variable that can hold multiple values at once. Think of it like a list.</p>
+      <pre>
+// Example
+let fruits = ["Apple", "Banana", "Mango"];
+console.log(fruits); // ["Apple", "Banana", "Mango"]
+      </pre>
+      <p><strong>Explanation:</strong> Instead of creating separate variables for each fruit, we store them together in one array.</p>
+    </div>
+
+    <!-- ACCESSING ELEMENTS -->
+    <div class="card">
+      <h2>Accessing Elements</h2>
+      <p><strong>Definition:</strong> Each item in an array has a position called an <em>index</em>, starting at 0.</p>
+      <pre>
+// Example
+let colors = ["Red", "Green", "Blue"];
+console.log(colors[0]); // Red
+console.log(colors[1]); // Green
+      </pre>
+      <p><strong>Explanation:</strong> Use square brackets <code>[]</code> with the index number to get a value.</p>
+    </div>
+
+    <!-- ADDING ELEMENTS -->
+    <div class="card">
+      <h2>Adding Elements</h2>
+      <p><strong>Definition:</strong> You can add new items to an array using <code>push()</code>.</p>
+      <pre>
+// Example
+let animals = ["Dog", "Cat"];
+animals.push("Elephant");
+console.log(animals); // ["Dog", "Cat", "Elephant"]
+      </pre>
+      <p><strong>Explanation:</strong> <code>push()</code> adds an item to the end of the array.</p>
+    </div>
+
+    <!-- REMOVING ELEMENTS -->
+    <div class="card">
+      <h2>Removing Elements</h2>
+      <p><strong>Definition:</strong> You can remove the last item using <code>pop()</code>.</p>
+      <pre>
+// Example
+let numbers = [1, 2, 3];
+numbers.pop();
+console.log(numbers); // [1, 2]
+      </pre>
+      <p><strong>Explanation:</strong> <code>pop()</code> removes the last element from the array.</p>
+    </div>
+
+    <!-- LOOPING THROUGH ARRAYS -->
+    <div class="card">
+      <h2>Looping Through Arrays</h2>
+      <p><strong>Definition:</strong> You can go through each item in an array using a loop.</p>
+      <pre>
+// Example
+let fruits = ["Apple", "Banana", "Mango"];
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+// Output:
+// Apple
+// Banana
+// Mango
+      </pre>
+      <p><strong>Explanation:</strong> The <code>for</code> loop runs through all items using the array’s <code>length</code> property.</p>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="card">
+      <h2>Summary</h2>
+      <ul>
+        <li>Arrays store multiple values in one variable.</li>
+        <li>Index starts at 0 (first item).</li>
+        <li><code>push()</code> adds items, <code>pop()</code> removes items.</li>
+        <li>Use loops to go through all items.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
