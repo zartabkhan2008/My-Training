@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Data Types</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #4CAF50;
+    }
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px;
+      }
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Data Types</h1>
+    <p>Understanding Primitive and Non-Primitive Data Types</p>
+  </header>
+
+  <div class="container">
+    <!-- Primitive Types -->
+    <div class="card">
+      <h2>1. String</h2>
+      <p>Represents text enclosed in quotes.</p>
+      <code>
+        let name = "Zartab";<br>
+        console.log(typeof name); // string
+      </code>
+    </div>
+
+    <div class="card">
+      <h2>2. Number</h2>
+      <p>Represents numeric values (integer or floating-point).</p>
+      <code>
+        let age = 25;<br>
+        let price = 99.99;<br>
+        console.log(typeof age); // number
+      </code>
+    </div>
+
+    <div class="card">
+      <h2>3. Boolean</h2>
+      <p>Represents logical values: <code>true</code> or <code>false</code>.</p>
+      <code>
+        let isStudent = true;<br>
+        console.log(typeof isStudent); // boolean
+      </code>
+    </div>
+
+    <div class="card">
+      <h2>4. Undefined</h2>
+      <p>A variable declared but not assigned has the value <code>undefined</code>.</p>
+      <code>
+        let x;<br>
+        console.log(typeof x); // undefined
+      </code>
+    </div>
+
+    <div class="card">
+      <h2>5. Null</h2>
+      <p>Represents an intentional "empty" value.</p>
+      <code>
+        let data = null;<br>
+        console.log(typeof data); // object (special case)
+      </code>
+    </div>
+
+    <div class="card">
+      <h2>6. Symbol</h2>
+      <p>Represents unique identifiers.</p>
+      <code>
+        let sym = Symbol("id");<br>
+        console.log(typeof sym); // symbol
+      </code>
+    </div>
+
+    <div class="card">
+      <h2>7. BigInt</h2>
+      <p>Used for very large integers beyond

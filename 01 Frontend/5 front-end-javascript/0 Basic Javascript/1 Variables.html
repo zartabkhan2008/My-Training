@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Variables in JavaScript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 { color: #2c3e50; }
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background: #2980b9; }
+    #output {
+      margin-top: 15px;
+      padding: 15px;
+      background: #ecf0f1;
+      border-left: 4px solid #3498db;
+      font-family: monospace;
+    }
+    @media (max-width: 600px) {
+      body { margin: 10px; }
+      .container { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Variables in JavaScript</h2>
+    <p>
+      Variables are containers for storing data. JavaScript provides three ways to declare them:
+    </p>
+    <ul>
+      <li><b>var</b>: Function-scoped, older style, can be redeclared.</li>
+      <li><b>let</b>: Block-scoped, modern usage, can be reassigned.</li>
+      <li><b>const</b>: Block-scoped, cannot be reassigned (immutable).</li>
+    </ul>
+    <p>Click the button below to see examples of each:</p>
+    <button onclick="showVariables()">Run Example</button>
+    <div id="output">Output will appear here...</div>
+  </div>
+
+  <script>
+    function showVariables() {
+      var oldVar = "I am var (function-scoped)";
+      let modernLet = "I am let (block-scoped)";
+      const fixedConst = "I am const (immutable)";
+      
+      document.getElementById("output").innerHTML = `
+        <p><b>var:</b> ${oldVar}</p>
+        <p><b>let:</b> ${modernLet}</p>
+        <p><b>const:</b> ${fixedConst}</p>
+        <p style="color:green;">Notice: var leaks outside blocks, while let/const stay inside.</p>
+      `;
+    }
+  </script>
+</body>
+</html>
