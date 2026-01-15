@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Objects for Beginners</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #795548;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #795548;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Objects</h1>
+    <p>A beginner-friendly guide with examples</p>
+  </header>
+
+  <div class="container">
+    <!-- WHAT IS AN OBJECT -->
+    <div class="card">
+      <h2>What is an Object?</h2>
+      <p><strong>Definition:</strong> An object is a collection of key-value pairs. Keys are called <em>properties</em>.</p>
+      <pre>
+// Example
+let person = {
+  name: "Alice",
+  age: 25,
+  isStudent: true
+};
+console.log(person);
+      </pre>
+      <p><strong>Explanation:</strong> Objects let us group related data together in one structure.</p>
+    </div>
+
+    <!-- ACCESSING PROPERTIES -->
+    <div class="card">
+      <h2>Accessing Properties</h2>
+      <p><strong>Definition:</strong> You can get values from an object using dot <code>.</code> or bracket <code>[]</code> notation.</p>
+      <pre>
+// Example
+let car = { brand: "Toyota", year: 2020 };
+console.log(car.brand);     // Toyota
+console.log(car["year"]);   // 2020
+      </pre>
+      <p><strong>Explanation:</strong> Dot notation is simpler, while bracket notation is useful when the property name is dynamic.</p>
+    </div>
+
+    <!-- ADDING PROPERTIES -->
+    <div class="card">
+      <h2>Adding Properties</h2>
+      <p><strong>Definition:</strong> You can add new properties to an object at any time.</p>
+      <pre>
+// Example
+let book = { title: "JS Basics" };
+book.author = "John Doe";
+console.log(book);
+// { title: "JS Basics", author: "John Doe" }
+      </pre>
+      <p><strong>Explanation:</strong> Objects are flexible — you can add new properties whenever needed.</p>
+    </div>
+
+    <!-- REMOVING PROPERTIES -->
+    <div class="card">
+      <h2>Removing Properties</h2>
+      <p><strong>Definition:</strong> Use the <code>delete</code> keyword to remove a property.</p>
+      <pre>
+// Example
+let user = { name: "Alice", age: 25 };
+delete user.age;
+console.log(user); // { name: "Alice" }
+      </pre>
+      <p><strong>Explanation:</strong> Removing properties is simple, but be careful not to delete important data.</p>
+    </div>
+
+    <!-- LOOPING THROUGH OBJECTS -->
+    <div class="card">
+      <h2>Looping Through Objects</h2>
+      <p><strong>Definition:</strong> Use <code>for...in</code> loop to go through all properties
