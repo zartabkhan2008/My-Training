@@ -2,76 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Variables in JavaScript</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Variables Explained</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
-      background: #f9f9f9;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
-      background: #fff;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      margin-bottom: 20px;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    h2 { color: #2c3e50; }
-    button {
-      background: #3498db;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      margin-top: 10px;
+    h2 {
+      color: #4CAF50;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
       border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover { background: #2980b9; }
-    #output {
-      margin-top: 15px;
-      padding: 15px;
-      background: #ecf0f1;
-      border-left: 4px solid #3498db;
-      font-family: monospace;
+      overflow-x: auto;
     }
     @media (max-width: 600px) {
-      body { margin: 10px; }
-      .container { padding: 15px; }
+      body {
+        font-size: 16px;
+      }
+      .card {
+        padding: 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Variables in JavaScript</h2>
-    <p>
-      Variables are containers for storing data. JavaScript provides three ways to declare them:
-    </p>
-    <ul>
-      <li><b>var</b>: Function-scoped, older style, can be redeclared.</li>
-      <li><b>let</b>: Block-scoped, modern usage, can be reassigned.</li>
-      <li><b>const</b>: Block-scoped, cannot be reassigned (immutable).</li>
-    </ul>
-    <p>Click the button below to see examples of each:</p>
-    <button onclick="showVariables()">Run Example</button>
-    <div id="output">Output will appear here...</div>
-  </div>
+  <header>
+    <h1>JavaScript Variables: var, let, const</h1>
+    <p>Understand the differences with examples</p>
+  </header>
 
-  <script>
-    function showVariables() {
-      var oldVar = "I am var (function-scoped)";
-      let modernLet = "I am let (block-scoped)";
-      const fixedConst = "I am const (immutable)";
-      
-      document.getElementById("output").innerHTML = `
-        <p><b>var:</b> ${oldVar}</p>
-        <p><b>let:</b> ${modernLet}</p>
-        <p><b>const:</b> ${fixedConst}</p>
-        <p style="color:green;">Notice: var leaks outside blocks, while let/const stay inside.</p>
-      `;
-    }
-  </script>
+  <div class="container">
+    <!-- VAR -->
+    <div class="card">
+      <h2>var</h2>
+      <p><strong>Definition:</strong> Declares a variable globally or function-scoped. Can be re-declared and updated.</p>
+      <pre>
+// Example with var
+var name = "Alice";
+console.log(name); // Alice
+
+var name = "Bob"; // re-declared
+console.log(name); // Bob
+      </pre>
+      <p><strong>Explanation:</strong> Variables declared with <code>var</code> are hoisted to the top of their scope. They can be re-declared, which may cause bugs in larger programs.</p>
+    </div>
+
+    <!-- LET -->
+    <div class="card">
+      <h2>let</h2>
+      <p><strong>Definition:</strong> Declares a block-scoped variable. Can be updated but not re-declared in the same scope.</p>
+      <pre>
+// Example with let
+let age = 25;
+console.log(age); // 25
+
+age = 30; // updated
+console.log(age); // 30
+
+// let age = 40; ❌ Error: cannot re-declare in same scope
+      </pre>
+      <p><strong>Explanation:</strong> <code>let</code> is safer than <code>var</code> because it respects block scope and prevents accidental re-declarations.</p>
+    </div>
+
+    <!-- CONST -->
+    <div class="card">
+      <h2>const</h2>
+      <p><strong>Definition:</strong> Declares a block-scoped constant. Must be initialized and cannot be reassigned.</p>
+      <pre>
+// Example with const
+const PI = 3.14159;
+console.log(PI); // 3.14159
+
+// PI = 3.14; ❌ Error: cannot reassign
+
+// Objects with const
+const person = { name: "Alice" };
+person.name = "Bob"; // allowed (object properties can change)
+console.log(person.name); // Bob
+      </pre>
+      <p><strong>Explanation:</strong> <code>const</code> ensures the variable identifier cannot be reassigned. However, objects and arrays declared with <code>const</code> can still have their contents modified.</p>
+    </div>
+  </div>
 </body>
 </html>
