@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // To Understand visually  Event Loop Concept
+
+        // https://www.jsv9000.app/
+        // http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+        
+
+        /* Episode 15 : Asynchronous JavaScript & EVENT LOOP
+
+        Defination :
+
+        The JavaScript event loop is the mechanism that enables asynchronous,
+        non-blocking behavior in a single-threaded environment.
+        It ensures that tasks like user interactions,timers, and network requests are handled
+        efficiently without freezing the UI.
+
+
+
+        Supper Power of Browser :
+
+         setTimeout() → Timer API
+         fetch() → Network API
+         document → DOM API
+         navigator.geolocation → Geolocation API
+         navigator.bluetooth → Bluetooth API
+         console.log() → Logging API
+
+         These APIs are not part of JavaScript itself — they’re provided by the browser.
+
+         We get all these inside call stack through global object ie. window
+
+         Use window keyword like : window.setTimeout(), window.localstorage, window.console.log() to log something inside console.
+
+         As window is global obj, and all the above functions are present in global object, we don't explicity write window but it is implied.
+
+         Now JS needs some way to connect the callstack with all these superpowers. This is done using Web APIs
+
+
+        Q: 🧵 Why Callback Queue Is Needed?
+
+        A: The callback queue ensures that asynchronous tasks (like timers, fetch responses, etc.)
+           are executed only after the call stack is empty. Without it, async behavior 
+           would interrupt synchronous execution, breaking the single-threaded model.
+
+
+        🧠 Core Concepts of the Event Loop :
+
+        Single-threaded nature: JavaScript runs on a single thread, meaning it can execute one task at a time.
+
+        Call stack: Where synchronous code is executed. Functions are pushed and popped here.
+
+        Web APIs: Asynchronous tasks like setTimeout, fetch, and DOM events are handled by browser APIs.
+
+        Callback queue (task queue): Stores callbacks from asynchronous operations to be executed when the call stack is empty.
+
+        Microtask queue: Contains tasks like Promise.then() and MutationObserver. These are prioritized over the callback queue.
+
+      
+        
+        🔄 How the Event Loop Works
+
+        Execute synchronous code: JavaScript starts by running all synchronous code in the call stack.
+
+        Handle microtasks: Once the stack is clear, the event loop checks the microtask queue and executes all tasks there.
+
+        Process callback queue: After microtasks, it moves to the callback queue and executes one task at a time.
+
+        Repeat: This cycle continues indefinitely, allowing JavaScript to remain responsive.
+
+       🔄 Event Loop Execution Order
+
+        Run all synchronous code in the call stack.
+
+        Empty the microtask queue.
+
+        Process one macrotask from the callback queue.
+
+        Repeat.
+
+
+*/
+        // example 01 
+
+        console.log("Start");
+
+        setTimeout(() => {
+            console.log("setTimeout");
+        }, 0);
+
+        Promise.resolve().then(() => {
+            console.log("Promise");
+        });
+
+        console.log("End");
+
+        // Example 02 
+
+        // Promise callback functions has more priority ( MicroTask Queue )
+        Promise.resolve()
+            .then(() => {
+                console.log("promise 1 completed");
+            })
+            .then(() => {
+                console.log("promise 2 completed");
+            })
+            .then(() => {
+                console.log("promise 3 completed");
+            })
+            .then(() => {
+                console.log("promise 4 completed");
+            })
+            .then(() => {
+                console.log("promise 5 completed");
+            })
+            .then(() => {
+                console.log("promise 6 completed");
+            })
+            .then(() => {
+                console.log("promise 7 completed");
+            })
+            .then(() => {
+                console.log("promise 8 completed");
+            })
+            .then(() => {
+                console.log("promise 9 completed");
+            })
+            .then(() => {
+                console.log("promise 10 completed");
+            });
+
+        console.log("end");
+
+
+        /*
+
+        Execution Order:
+
+        console.log("Start") → synchronous → printed immediately.
+
+        setTimeout(...) → scheduled via Web API → callback goes to callback queue.
+        
+        Promise.resolve().then(...) → microtask → goes to microtask queue.
+
+        console.log("End") → synchronous → printed immediately.
+
+        Microtasks are processed → console.log("Promise").
+
+        Callback queue is processed → console.log("setTimeout"). 
+        
+        */
+
+        /* Promise is a microtask and runs before setTimeout, which is a macrotask. */
+
+
+
+    </script>
+</body>
+
+</html>

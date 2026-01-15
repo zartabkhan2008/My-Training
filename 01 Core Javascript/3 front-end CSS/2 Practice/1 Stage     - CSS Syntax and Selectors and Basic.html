@@ -1,0 +1,88 @@
+<!--
+
+
+🟢 Stage 1: Fundamentals
+
+CSS Syntax and Selectors: Learn how to write CSS rules and use selectors like class, ID, and element.
+Colors and Backgrounds: Apply color schemes, gradients, and background images.
+Text and Fonts: Style typography with font families, sizes, weights, and spacing.
+Box Model: Understand padding, borders, margins, and content dimensions.
+Display and Visibility: Control how elements appear with display, visibility, and overflow.
+
+
+🔍 What This Covers
+
+CSS Syntax and Selectors: Uses element (body), class (.card, .description), and ID (#title) selectors.
+Colors and Backgrounds: Applies background color and gradient.
+Text and Fonts: Sets font family, size, weight, and color.
+Box Model: Demonstrates padding, margin, border, and width.
+Display and Visibility: Uses display: none to hide an element.
+
+videos :
+
+1 https://www.youtube.com/watch?v=ArUL-He_AN0&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=14
+2 https://www.youtube.com/watch?v=oPPym7UaSIo&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=15
+3 https://www.youtube.com/watch?v=buxedopZbKM&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=16
+4 https://www.youtube.com/watch?v=5Gz7j4gDrXM&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=17
+5 https://www.youtube.com/watch?v=EEw5OJCsiDs&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=18
+6 https://www.youtube.com/watch?v=2zcHiaHo4Jo&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=19
+7 https://www.youtube.com/watch?v=YJtlXrzXXFk&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=24
+8 https://www.youtube.com/watch?v=WwUM7qOimbo&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=31
+9 https://www.youtube.com/watch?v=Uzuq2FGxgK4&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=27
+10 https://www.youtube.com/watch?v=P-hZDC5YkJE&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=32
+11 https://www.youtube.com/watch?v=PlKG1fooswU&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=33
+12 https://www.youtube.com/watch?v=ASNldCkFBcM&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=34
+13 https://www.youtube.com/watch?v=jiK6Mf-ILSg&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=36
+14 https://www.youtube.com/watch?v=k4Dr0PJKidI&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=37
+15 https://www.youtube.com/watch?v=K0Gz7CKNJzY&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=38
+16 https://www.youtube.com/watch?v=Uzuq2FGxgK4&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=27
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS Syntax and Selectors */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .card {
+      background: linear-gradient(to right, #ffffff, #e0e0e0); /* Colors and Backgrounds */
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin: 50px auto;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    #title {
+      font-size: 24px; /* Text and Fonts */
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #666;
+    }
+
+    .hidden {
+      display: none; /* Display and Visibility */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div id="title">Welcome to CSS</div>
+    <p class="description">This card shows how to use CSS selectors, colors, fonts, box model, and display properties.</p>
+    <p class="description hidden">You can't see this text because it's hidden using display: none.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!--
+
+
+🟢 Stage 1: Fundamentals
+
+CSS Syntax and Selectors: Learn how to write CSS rules and use selectors like class, ID, and element.
+Colors and Backgrounds: Apply color schemes, gradients, and background images.
+Text and Fonts: Style typography with font families, sizes, weights, and spacing.
+Box Model: Understand padding, borders, margins, and content dimensions.
+Display and Visibility: Control how elements appear with display, visibility, and overflow.
+
+
+🔍 What This Covers
+
+CSS Syntax and Selectors: Uses element (body), class (.card, .description), and ID (#title) selectors.
+Colors and Backgrounds: Applies background color and gradient.
+Text and Fonts: Sets font family, size, weight, and color.
+Box Model: Demonstrates padding, margin, border, and width.
+Display and Visibility: Uses display: none to hide an element.
+
+videos 
+
+1 https://www.youtube.com/watch?v=2zcHiaHo4Jo&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=19
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS Syntax and Selectors */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .card {
+      background: linear-gradient(to right, #ffffff, #e0e0e0); /* Colors and Backgrounds */
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin: 50px auto;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    #title {
+      font-size: 24px; /* Text and Fonts */
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #666;
+    }
+
+    .hidden {
+      display: none; /* Display and Visibility */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div id="title">Welcome to CSS</div>
+    <p class="description">This card shows how to use CSS selectors, colors, fonts, box model, and display properties.</p>
+    <p class="description hidden">You can't see this text because it's hidden using display: none.</p>
+  </div>
+
+</body>
+</html>

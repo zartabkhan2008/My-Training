@@ -1,0 +1,27 @@
+Must-Know Git Commands for Beginners
+
+🔧 Initial Setup
+
+git config --global user.name "Your Name"
+
+git config --global user.email "you@example.com" Set your identity for commits.
+
+Start a Project
+
+git init Create a new Git repository in your folder.
+
+git clone <repository-url> Copy a remote repository to your computer.
+
+📄 Track and Save Changes
+
+git status Check which files are changed or staged.
+
+git add <file> or git add . Stage changes for commit.
+
+git commit -m "Your message" Save changes with a message.
+
+Work with Remote Repositories
+
+git push origin main Upload your commits to GitHub.
+
+git pull Download and merge changes from GitHub.

@@ -1,0 +1,215 @@
+<!-- 
+📘 Introduction to HTML Tables
+
+HTML tables are used to display data in a structured format using 
+rows and columns. They are especially useful for organizing 
+information like schedules, price lists, or comparison charts.
+
+🧩 Basic Structure
+
+An HTML table begins with the <table> tag.
+Inside it, rows are defined using <tr> (table row), and each row contains cells. Header cells use <th> (table header), which are bold and centered by default, while regular data cells use <td> (table data). For example, a simple table might have one row of headers and several rows of data.
+
+🛠️ Common Tags and Their Roles
+The <table> tag wraps the entire table. Each row is created with <tr>, and within each row, you place either <th> for headers or <td> for data. These tags help browsers understand how to display the content in a grid-like format.
+
+🎨 Optional Attributes
+You can use attributes like border to add visible lines around cells. cellpadding adds space inside each cell, while cellspacing adds space between cells. These attributes help improve readability and layout.
+
+🧠 Merging Cells
+To merge cells horizontally, use the colspan attribute inside a <td> or <th> tag. To merge cells vertically, use rowspan. This is useful when you want to create multi-level headers or group related data.
+
+🧾 Enhancing Semantics
+For better structure and accessibility, you can use <caption> to add a title to the table. Group header rows with <thead>, body rows with <tbody>, and footer rows with <tfoot>. These tags help screen readers and styling tools understand the table's layout. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creat table</title>
+</head>
+
+<body>
+    <h1>Basic Table Example</h1>
+    <table border="1">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>Apples</td>
+            <td>$2</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Bananas</td>
+            <td>$1</td>
+            <td>10</td>
+        </tr>
+    </table>
+    <h1>Complex Table Example</h1>
+
+    <table border="1">
+        <caption><strong>Monthly Sales Report</strong></caption>
+        <tr>
+            <th rowspan="2">Region</th>
+            <th colspan="3">Sales (in USD)</th>
+        </tr>
+        <tr>
+            <th>January</th>
+            <th>February</th>
+            <th>March</th>
+        </tr>
+        <tr>
+            <td>North</td>
+            <td>5000</td>
+            <td>7000</td>
+            <td>6500</td>
+        </tr>
+        <tr>
+            <td>South</td>
+            <td>4500</td>
+            <td>4800</td>
+            <td>5200</td>
+        </tr>
+    </table>
+
+    <h1>Important</h1>
+
+    <ol>
+        <li>
+            <caption> adds a title to the table
+        </li>
+        <li>rowspan merges cells vertically</li>
+        <li>colspan merges cells horizontally</li>
+        <li>Structured for multi-level headers</li>
+    </ol>
+
+
+
+
+
+
+
+        <table border="1">
+        <tr>
+            <td colspan="9" align="center">Time Table</td>
+        </tr>
+        <tr>
+            <th>id</th>
+            <th>time</th>
+            <th>monday</th>
+            <th>tuesday</th>
+            <th>wed</th>
+            <th>thur</th>
+            <th>fri</th>
+            <th>sat</th>
+            <th>sunday</th>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td colspan="9" align="center"> Break</td>
+        </tr>
+                <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+    </table
+</body>
+
+</html>

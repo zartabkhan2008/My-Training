@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complete HTML5 Form</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form action="/submit" method="post" enctype="multipart/form-data">
+    
+    <!-- Text Input -->
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br><br>
+
+    <!-- Email Input -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Password Input -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <!-- Number Input -->
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="1" max="120"><br><br>
+
+    <!-- Date Input -->
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <!-- Time Input -->
+    <label for="appt">Preferred Time:</label><br>
+    <input type="time" id="appt" name="appt"><br><br>
+
+    <!-- Color Picker -->
+    <label for="favcolor">Favorite Color:</label><br>
+    <input type="color" id="favcolor" name="favcolor"><br><br>
+
+    <!-- Range Slider -->
+    <label for="satisfaction">Satisfaction Level:</label><br>
+    <input type="range" id="satisfaction" name="satisfaction" min="0" max="10"><br><br>
+
+    <!-- URL Input -->
+    <label for="website">Website:</label><br>
+    <input type="url" id="website" name="website"><br><br>
+
+    <!-- Tel Input -->
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone"><br><br>
+
+    <!-- Search Input -->
+    <label for="search">Search:</label><br>
+    <input type="search" id="search" name="search"><br><br>
+
+    <!-- File Upload -->
+    <label for="resume">Upload Resume:</label><br>
+    <input type="file" id="resume" name="resume"><br><br>
+
+    <!-- Select Dropdown -->
+    <label for="country">Country:</label><br>
+    <select id="country" name="country">
+      <option value="">--Select--</option>
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select><br><br>
+
+    <!-- Datalist -->
+    <label for="browser">Choose a browser:</label><br>
+    <input list="browsers" id="browser" name="browser">
+    <datalist id="browsers">
+      <option value="Chrome">
+      <option value="Firefox">
+      <option value="Safari">
+      <option value="Edge">
+      <option value="Opera">
+    </datalist><br><br>
+
+    <!-- Radio Buttons -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <!-- Checkboxes -->
+    <label>Interests:</label><br>
+    <input type="checkbox" id="coding" name="interests" value="coding">
+    <label for="coding">Coding</label><br>
+    <input type="checkbox" id="music" name="interests" value="music">
+    <label for="music">Music</label><br>
+    <input type="checkbox" id="sports" name="interests" value="sports">
+    <label for="sports">Sports</label><br><br>
+
+    <!-- Textarea -->
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+    <!-- Hidden Input -->
+    <input type="hidden" name="form_id" value="registration123">
+
+    <!-- Submit and Reset Buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+  </form>
+</body>
+</html>

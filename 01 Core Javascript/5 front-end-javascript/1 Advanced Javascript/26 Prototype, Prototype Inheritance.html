@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    /* 💡"JavaScript-with-JC"
+
+👉 Prototype and Prototype Inheritance 
+
+     What is Prototype 
+
+    In programming, inheritance refers to passing down characteristics from a parent to a child 
+    so that a new piece of code can reuse and build upon the features of an existing one.
+
+    JavaScript implements inheritance by using objects. Each object has an internal link to 
+    another object called its prototype. That prototype object has a prototype of its own, 
+    and so on until an object is reached with null as its prototype.
+
+    
+    💡Difference between prototype and  __proto__
+
+    prototype is a property of a Function object. It is the prototype of objects constructed by that function.
+    __proto__ is an internal property of an object, pointing to its prototype.
+
+    Prototype has two types of Inheritance
+
+    1 prototype-based Inheritance
+
+      Key Concepts
+
+      Objects inherit directly from other objects.
+      Functions have a prototype property that is used to attach shared methods.
+      Inheritance is achieved by linking objects via Object.create() or constructor functions.
+    
+      2 class-based inheritance (ES6) Inheritance
+
+      Introduced in ES6, this syntax is syntactic sugar over the prototype-based model.
+
+      Key Concepts
+
+      Uses class and extends keywords.
+      More readable and familiar to developers from class-based languages like Java or C++.
+      Still uses prototypes under the hood
+
+      extends	 - Inherits from another class	
+      constructor	 - Initializes instance properties	
+      super()	 - Calls parent constructor or method	
+      static	 - Defines class-level methods	
+
+      Example of multiple inheritance in JS 
+      (mixins, Object.assign), since JS doesn’t support it directly.
+
+*/
+    // 01 Basic Example - prototype-based Inheritance
+
+    function Animal(name) {
+      this.name = name;
+    }
+
+    // Add a method to the prototype
+    Animal.prototype.speak = function () {
+      console.log(`${this.name} makes a sound.`);
+    };
+
+    // Create an instance
+    const dog = new Animal('Buddy');
+
+    // Check the prototype chain
+    console.log(dog.__proto__ === Animal.prototype); // true
+
+    // Access method via prototype chain
+    dog.speak(); // Buddy makes a sound
+
+    // 02 Example  : class-based inheritance in JavaScript
+
+    class Vehicle {
+      constructor(type, wheels) {
+        this.type = type;
+        this.wheels = wheels;
+      }
+
+      start() {
+        console.log(`${this.type} is starting with ${this.wheels} wheels.`);
+      }
+
+      static generalInfo() {
+        console.log("Vehicles are used for transportation.");
+      }
+    }
+
+    class Car extends Vehicle {
+      constructor(brand, wheels = 4) {
+        super("Car", wheels);
+        this.brand = brand;
+      }
+
+      start() {
+        super.start(); // Call Vehicle's start method
+        console.log(`${this.brand} car is ready to go.`);
+      }
+    }
+
+    class ElectricCar extends Car {
+      constructor(brand, batteryRange) {
+        super(brand);
+        this.batteryRange = batteryRange;
+      }
+
+      start() {
+        super.start(); // Call Car's start method
+        console.log(`${this.brand} electric car has ${this.batteryRange} km range.`);
+      }
+
+      charge() {
+        console.log(`${this.brand} is charging...`);
+      }
+    }
+
+    // Usage
+    const tesla = new ElectricCar("Tesla", 500);
+    tesla.start();     // Inherited and overridden methods
+    tesla.charge();    // Unique method
+    Vehicle.generalInfo(); // Static method
+
+  </script>
+
+
+</body>
+
+</html>

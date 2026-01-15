@@ -1,0 +1,44 @@
+The JavaScript  Basic Concept Tree 👇
+|
+|── Variables
+| ├── var
+| ├── let
+| └── const
+
+|── Data Types
+| ├── String
+| ├── Number
+| ├── Boolean
+| ├── Object
+| ├── Array
+| ├── Null
+| └── Undefined
+
+|── Operators
+| ├── Arithmetic
+| ├── Assignment
+| ├── Comparison
+| ├── Logical
+| ├── Unary
+| └── Ternary (Conditional)
+
+|── Control Flow
+| ├── if statement
+| ├── else statement
+| ├── else if statement
+| ├── switch statement
+| ├── for loop
+| ├── while loop
+| └── do-while loop
+
+|── Scope
+| ├── Global scope
+| ├── Local scope
+| ├── Block scope
+| └── Lexical scope
+
+|── Arrays
+
+|── Objects
+
+

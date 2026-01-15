@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>undefined vs not defined in JS</title>
+</head>
+
+<body>
+    <script>
+        // If an object/variable is not even declared/found in memory allocation phase, and tried to access itthen it is Not defined
+        // Not Defined !== Undefined
+
+        console.log(x); // undefined
+        var x = 25;
+        console.log(x); // 25
+        console.log(a); // Uncaught ReferenceError: a is not defined
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+🧭 Steps to Debug HTML Elements with F12
+Open DevTools
+
+Press F12 or Ctrl+Shift+I (Windows/Linux) or Cmd+Option+I (Mac).
+Alternatively, right-click on any element and choose Inspect.
+
+Use the Elements Panel
+
+Shows the full HTML structure of the page.
+Hover over elements to highlight them on the page.
+Click to expand nested elements and view attributes.
+
+Live Edit HTML
+
+Double-click on tags or attributes to edit them.
+Right-click → "Edit as HTML" to modify entire blocks.
+Changes are temporary and only visible in your browser.
+Check Styles in the CSS Panel
+On the right side, see all CSS rules applied to the selected element.
+View computed styles, inherited styles, and active rules.
+Toggle properties on/off or add new ones to test fixes.
+
+View Box Model
+
+Shows margin, border, padding, and content dimensions.
+Helps diagnose layout issues like spacing or alignment.
+Console for Errors
+Switch to the Console tab to see HTML/CSS/JS errors.
+Useful for catching invalid tags or missing resources.
