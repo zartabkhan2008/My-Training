@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 Notes with Examples</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 950px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #34495e;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
+      margin-top: 30px;
+    }
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    pre {
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+    .browser-support {
+      background: #eafaf1;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    .unsupported {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📘 ES6 Notes with Examples</h1>
+
+    <h2>📌 Core Features</h2>
+    <p><strong>let keyword</strong> – Block-scoped variables.</p>
+    <pre><code>for (let i = 0; i < 3; i++) {
+  console.log(i);
+}
+// i is not accessible outside the loop</code></pre>
+
+    <p><strong>const keyword</strong> – Constants cannot be reassigned.</p>
+    <pre><code>const PI = 3.14;
+// PI = 3.14159 ❌ Error</code></pre>
+
+    <p><strong>Arrow functions</strong> – Concise syntax, inherit <em>this</em>.</p>
+    <pre><code>const add = (a, b) => a + b;
+console.log(add(2, 3)); // 5</code></pre>
+
+    <p><strong>Destructuring assignment</strong> – Extract values easily.</p>
+    <pre><code>const person = {name: "Alice", age: 20};
+const {name, age} = person;
+console.log(name, age);</code></pre>
+
+    <p><strong>Spread operator</strong> – Expands arrays/objects.</p>
+    <pre><code>const arr1 = [1, 2];
+const arr2 = [...arr1, 3, 4];
+console.log(arr2); // [1,2,3,4]</code></pre>
+
+    <p><strong>For/of loop</strong> – Iterates over iterable objects.</p>
+    <pre><code>for (const char of "ES6") {
+  console.log(char);
+}</code></pre>
+
+    <h2>🔑 Advanced Features</h2>
+    <p><strong>Maps</strong> – Key-value pairs.</p>
+    <pre><code>const map = new Map();
+map.set("a", 1);
+console.log(map.get("a")); // 1</code></pre>
+
+    <p><strong>Sets</strong> – Unique values only.</p>
+    <pre><code>const set = new Set([1,2,2,3]);
+console.log(set); // {1,2,3}</code></pre>
+
+    <p><strong>Classes</strong> – OOP-style syntax.</p>
+    <pre><code>class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log(this.name + " makes a sound");
+  }
+}
+const dog = new Animal("Dog");
+dog.speak();</code></pre>
+
+    <p><strong>Promises</strong> – Handle async operations.</p>
+    <pre><code>const promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Done!"), 1000);
+});
+promise.then(result => console.log(result));</code></pre>
+
+    <p><strong>Default parameters</strong> – Function defaults.</p>
+    <pre><code>function greet(name = "Guest") {
+  console.log("Hello " + name);
+}
+greet(); // Hello Guest</code></pre>
+
+    <h2>✨ Additional Enhancements</h2>
+    <p><strong>Template literals</strong> – Embed expressions.</p>
+    <pre><code>const name = "Bob";
+console.log(`Hello, ${name}!`);</code></pre>
+
+    <p><strong>Modules</strong> – Import/export.</p>
+    <pre><code>// file1.js
+export const num = 42;
+
+// file2.js
+import { num } from './file1.js';
+console.log(num);</code></pre>
+
+    <p><strong>Rest parameters</strong> – Collect arguments.</p>
+    <pre><code>function sum(...nums) {
+  return nums.reduce((a,b) => a+b, 0);
+}
+console.log(sum(1,2,3)); // 6</code></pre>
+
+    <p><strong>Generators</strong> – Pause/resume functions.</p>
+    <pre><code>function* gen() {
+  yield 1;
+  yield 2;
+}
+const g = gen();
+console.log(g.next().value); // 1</code></pre>
+
+    <p><strong>Symbol</strong> – Unique property keys.</p>
+    <pre><code>const sym = Symbol("id");
+const obj = { [sym]: 123 };
+console.log(obj[sym]);</code></pre>
+
+    <h2>🌍 Browser Support</h2>
+    <div class="browser-support">
+      ✅ Supported in modern browsers since 2017: Chrome 51, Edge 15, Firefox 54, Safari 10, Opera 38.<br>
+      ❌ <span class="unsupported">Not supported in Internet Explorer.</span>
+    </div>
+  </div>
+</body>
+</html>
