@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .box{
-            text-align: center;
-           margin: auto;
-           width: 300px;
-           line-height: 30px;
-           background-color: rgb(236, 147, 229);
-        }
-        #heading{
-            background-color: gray;
-            color: black;
-            width: 300px;
-            height: 30px;
-            text-align: center;
-        }
-        #btn{
-        color: rgb(0, 0, 0);
-        background: #727177;
-       
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
 </head>
 <body>
-    <div class="box">
-    <h3 id="heading">To Do App</h3>
-    <input id="input" placeholder="Enter task" />
-    <button id="btn">Click</button>
-    <ul id="list"></ul>
-    </div>
-    <script src="Function.js"></script>
+  <h1>Calculator Example</h1>
+  
+  <p>Open your browser console to see results.</p>
+  
+  <script>
+    // Calculator function
+    function calculator(a, b, operator) {
+        
+      if (operator === "add") {
+        return a + b;
+      } else if (operator === "subtract") {
+        return a - b;
+      } else if (operator === "multiply") {
+        return a * b;
+      } else if (operator === "divide") {
+        if (b !== 0) {
+          return a / b;
+        } else {
+          return "Error: Division by zero!";
+        }
+      } else {
+        return "Invalid operator!";
+      }
+    }
+
+    // Example usage
+
+    debugger;
+    console.log("Addition:", calculator(10, 5, "add"));
+    console.log("Subtraction:", calculator(10, 5, "subtract"));
+    console.log("Multiplication:", calculator(10, 5, "multiply"));
+    console.log("Division:", calculator(10, 5, "divide"));
+  </script>
 </body>
 </html>

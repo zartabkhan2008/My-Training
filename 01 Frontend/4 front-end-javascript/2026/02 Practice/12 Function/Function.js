@@ -1,34 +1,32 @@
-// 1) function and function Call
-//function add (a,b) { // a,b => This is Parameters (name)
-  //  return a + b 
-//} 
-//console.log(add(2,3)) // 2,3 => This is Arguments (value)
+function userdetails() {
+  console.log("A");
+  console.log("B");
+  console.log("C");
+  console.log("D");
+  console.log("E");
+  console.log("F");
+  console.log("G");
+  console.log("H");
+  console.log("I");
+  console.log("J");
+  console.log("K");
+  console.log("L");
+  console.log("M");
+  console.log("N");
+  console.log("O");
+  console.log("P");
+  console.log("Q");
+  console.log("R");
+  console.log("S");
+  console.log("T");
+  console.log("U");
+  console.log("V");
+  console.log("W");
+  console.log("X");
+  console.log("Y");
+  console.log("Z");
+}
 
-// Call Back and map,Higher-Order Function
-
-let input = document.getElementById("input")
-let btn = document.getElementById("btn")
-let list = document.getElementById("list")
-
-//
-btn.addEventListener( "click",() =>{
-let task = input.value    
-let li = document.createElement("li")
-li.textContent=task
-//
-let delBtn = document.createElement("button")
-delBtn.textContent = "Delete"
-delBtn.addEventListener("click", () => {
-li.remove()
-})
-//
-li.appendChild(delBtn)
-list.appendChild(li)
-input.value= ""
-})
-// Enter
-input.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    btn.click();
-  }
-});
+// Call the function when the page loads
+userdetails();
+userdetails();
