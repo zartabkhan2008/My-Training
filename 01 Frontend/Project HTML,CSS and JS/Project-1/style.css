@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(226, 151, 151);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+display: flex;
+list-style-type: none;
+height: 55px;
+background-color: black;
+color: white;
+align-items: center;
+}
+nav ul li{
+padding: 0px 12px;
+
+}
+.logo img{
+width: 50px;
+padding: 0 8px;
+padding-left: 7px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: bolder ;
+    font-size: 2rem;
+}
+.container{
+min-height: 70vh;
+background-color: black;
+color: white;
+margin: 12px auto;
+width: 70%;
+border-radius: 12px;
+background-image: url(https://www.shutterstock.com/shutterstock/videos/3980355629/thumb/1.jpg?ip=x480);
+
+}
+.bottom{
+    position: sticky;
+    background-color: black;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    flex-direction: column;
+}
+#myprogressbar{
+    width: 60vw;
+}
+.icons{
+    margin-top: 20px;
+}
+.songlist{
+    height: 35px;
+    display: flex;
+    background-color: white;
+    width: 38%;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding-left: 25px;
+    padding-right: 10px;
+    border-radius: 22px;
+}
+.songlist img{
+width: 20px;
+border-radius: 34px;
+
+}
+.song{
+    padding-left: 15px;
+}
+.timespan{
+    margin-right:  40px;
+}
+.box1{
+    margin-top: 55px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Position => relative,absolute,fixed,sticky */
+        #box {
+            background: #a3dae6;
+            height: 2000px;
+        }
+         
+        .box2{
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+            margin: 4px;
+            display: inline-block;
+            position: relative;
+            left: 400px;
+            top: 400px;
+        }
+        
+        .box3{
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+            margin: 4px;
+            display: inline-block;
+            position: absolute;
+            bottom: 200px;
+        }
+
+        .box4{
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+            margin: 4px;
+            display: inline-block;
+            position: fixed;
+            right:20px;
+        }
+        .box5{
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+            margin: 4px;
+            display: inline-block;
+            position: sticky;
+            top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    <div class="box2">position relative</div>
+    <div class="box3">position absolute</div>
+    <div class="box4"> Position fixed</div>
+    <div class="box5"> Position Sticky</div>
+    </div>
+</body>
+</html>
