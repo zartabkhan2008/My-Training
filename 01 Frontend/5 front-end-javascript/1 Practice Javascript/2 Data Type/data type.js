@@ -1,37 +1,21 @@
-// Primitive Data Types
+let string = "Zartab" 
+console.log("string for text = "+string);
 
-let number = 200 // Number
-console.log(number);
+let number = 25
+console.log("number = "+ number);
 
-let Data = null // Null
-console.log(Data);
+let boolean = true;
+console.log("boolean for true and false = "+boolean);
 
-let name = "Momin Zartab Abubakar" // String
-console.log(name);
+let undefine = 
+console.log("undefine = ? "+undefined);
 
-let a = "Symbol" // Symbol
-console.log(a);
+let y = null
+console.log(y);
 
-let boolean = true // Boolean
-console.log(boolean);
+let sym = "Symbol";
+console.log("Symbol = "+sym);
 
-let big = 12345678910n // Bigint
-console.log(big);
+let bigNum = 12345678901234567890n;
+console.log("BigInt for big number = "+bigNum);
 
-let x            // Undefined
-console.log(x);
-
-// Non-Primitive Data Types
-
-// Object
-let person = {
-  name: "Alice",
-  age: 30,
-  isStudent: false
-};
-console.log(person.name); // Alice
-
-// Array
-let colors = ["red", "green", "blue"];
-console.log(colors[1]); // green
-      
