@@ -28,5 +28,3 @@ switch (year) {
     console.log("Year not matched");
 }
 
-
-

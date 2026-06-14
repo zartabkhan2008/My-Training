@@ -75,13 +75,10 @@ Condition checked after execution
 
     */
 
-
 let k = 1; // initialization
 debugger;
 do {
     console.log("6 x " + k + " = " + (6 * k));
     k++; //increment/decrement
 } 
-
 while (k <= 10); // condition
-

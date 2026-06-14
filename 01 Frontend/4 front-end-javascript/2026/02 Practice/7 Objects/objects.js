@@ -2,7 +2,7 @@
 let student = {
     name : "Momin Zartab Abubakar" ,
     age : 18 ,
-    mobailno : 7709290821 ,
+    mobailno : 1234567891 ,
 }
 
 student.age = 17 // Update Property
