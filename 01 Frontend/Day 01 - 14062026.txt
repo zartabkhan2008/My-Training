@@ -1,0 +1,5 @@
+01 if else if vs swtich stmt
+02 loops and types with diff
+03 function basic
+04 scope
+05 Revison from 1 to 8 files from javascript folder

@@ -1,4 +1,3 @@
-
 // Topic ==> Update Property, Add New Property, Delete Property.
 let student = {
     name : "Momin Zartab Abubakar" ,

@@ -28,7 +28,7 @@ let z = [60,70,80,90,100]
 let n = m.concat(z)
 console.log(n);
 
-//                     Array Method
+//                    * Array Method *
 
 // .map
 const arr = [1,2,3]
