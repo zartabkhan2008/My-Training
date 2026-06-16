@@ -30,26 +30,28 @@ console.log(5 === 5);    // true
 console.log(5 === "5");  // false (value + type)
 
 // 3. Not Equal (!=)
-console.log(5 != 3);     // true
-console.log(5 != "5");   // false
+console.log(5 != 3);     // true 
+console.log(5 != "5");   // false (sirf value check)
 
 // 4. Strict Not Equal (!==)
 console.log(5 !== 3);    // true
-console.log(5 !== "5");  // true
+console.log(5 !== "5");  // true (value + type)
 
-// 5. Greater Than (>)
+// 5. Greater Than (>) ==> (Left side wali value right side wali value se badi honi chahiye)
 console.log(10 > 5);     // true
 console.log(5 > 10);     // false
 
-// 6. Less Than (<)
+
+
+// 6. Less Than (<) ==> (Left side wali value right side wali value se chhoti honi chahiye)
 console.log(5 < 10);     // true
 console.log(10 < 5);     // false
 
-// 7. Greater Than or Equal (>=)
+// 7. Greater Than or Equal (>=) (Left side wali value right side se badi YA barabar honi chahiye)
 console.log(10 >= 10);   // true
 console.log(9 >= 10);    // false
 
-// 8. Less Than or Equal (<=)
+// 8. Less Than or Equal (<=) (Left side wali value right side se chhoti YA barabar honi chahiye)
 console.log(5 <= 5);     // true
 console.log(6 <= 5);     // false
 

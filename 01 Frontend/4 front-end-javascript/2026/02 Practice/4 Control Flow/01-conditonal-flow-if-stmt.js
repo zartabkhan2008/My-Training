@@ -50,7 +50,7 @@ let count = 99;
 let gender ="male";
 let country = "IND";
 debugger;
-if (count >= 99 && gender=="maDle" && country=="INDD" ) {
+if (count >= 99 && gender=="male" && country=="INDD" ) {
     console.log("grade A");
 } else if (count >= 80){
     console.log("grade B");
