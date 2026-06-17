@@ -1,4 +1,6 @@
 /*
+Youtube - https://www.youtube.com/watch?v=SHINoHxvTso
+
 🔹 What is an Arrow Function?
 
 👉 An Arrow Function is a shorter way to write functions in JavaScript.
@@ -126,6 +128,11 @@ person.show(); // undefined ❌
 ❌ As constructor functions
 ❌ When you need dynamic this
 
-
-
 */
+
+// Function Stmt
+
+function name() {
+    console.log();
+}
+// Function Expression
