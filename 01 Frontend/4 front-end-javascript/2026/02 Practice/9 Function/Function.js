@@ -1,13 +1,50 @@
-/*
-
-// Function Stmt
-
+// 1) Normal Function
+name ();
 function name() {
-    console.log();
+    console.log("Hi Zartab");
 }
-// Function Expression
+name();
 
+// 2) Function Expression ==> A function is stored inside a variable.
+// fullname(); ==> Error
+let fullname = function () {
+    console.log("Hi Mudassir");
+}
+fullname();
 
+// 3) Anonymous Function
+// An anonymous function is a function without a name.
+let idname = function () {
+    console.log("Hi Mudassir");
+}
+idname();
+
+// 4) This is Named Function Expression
+/* let greet = function sayHello() {
+    console.log("Hello");
+   }; */
+
+// 5) Difference betwen parameters and arguments
+function value(a,b) // This is parameters
+{
+    console.log(a+b);
+}
+value(5,22) // This is arguments
+
+// 6) First Class Function
+function run(task) {
+    task();
+}
+
+run(function() {
+    console.log("Hello");
+});
+
+run(function() {
+    console.log("Bye");
+});
+
+/*
 Youtube - https://www.youtube.com/watch?v=SHINoHxvTso
 
 🔹 What is an Arrow Function?
