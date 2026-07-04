@@ -1,5 +1,7 @@
 # Episode 6: Undefined vs Not Defined
 
+https://www.youtube.com/watch?v=B7iF6G3EyIk&list=PLxnjbfm5MCHFbRlyVCAqpJFdIzPN_IPID&index=7
+
 - In first phase (mem alloc) JS assigns each variable to a placeholder called *undefined*
 - *undefined* is when memory is allocated for the variable, but no value is assigned yet.
 - If an object/variable is not even declared/found in mem alloc phase, and tried to access it then it is *Not defined*

@@ -1,5 +1,9 @@
 # Episode 2 : Execution & Call Stack
 
+https://www.youtube.com/watch?v=ZvbzSrg0afE&list=PLxnjbfm5MCHFbRlyVCAqpJFdIzPN_IPID&index=2
+
+https://www.youtube.com/watch?v=iLWTnMzWtj4&list=PLxnjbfm5MCHFbRlyVCAqpJFdIzPN_IPID&index=3
+
 Everytime you run a program, an execution context is created.
 When a variable or function is encountered, it is stored in the memory area. 
 

@@ -1,5 +1,7 @@
 # Episode 1 : Execution Context
 
+https://www.youtube.com/watch?v=pN6jk0uUrD8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP
+
 ### Everything in JS happens inside the execution context. 
 
 Assume execution context to be a big box where everything takes place. It has 2 components in it:

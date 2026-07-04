@@ -1,5 +1,7 @@
 # Episode 3 : Hoisting
 
+https://www.youtube.com/watch?v=Fnlnw8uY6jo&list=PLxnjbfm5MCHFbRlyVCAqpJFdIzPN_IPID&index=4
+
 ```
 // code example 1
 

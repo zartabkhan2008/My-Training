@@ -1,5 +1,8 @@
 # Episode 7 : Scope and Lexical Environment
 
+https://www.youtube.com/watch?v=uH-tVP8MUs8&list=PLxnjbfm5MCHFbRlyVCAqpJFdIzPN_IPID&index=8
+
+
 ```
 This is why JS is confusing (Case-1)
 

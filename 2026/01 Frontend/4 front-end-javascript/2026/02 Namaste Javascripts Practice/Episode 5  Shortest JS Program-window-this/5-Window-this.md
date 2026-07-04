@@ -1,5 +1,9 @@
 # Episode 5: Window and this keyword
 
+https://www.youtube.com/watch?v=9T4z98JcHR0 (this keyword)
+
+https://www.youtube.com/watch?v=QCRpVw2KXf8&list=PLxnjbfm5MCHFbRlyVCAqpJFdIzPN_IPID&index=6
+
 ### Everywhere JS is run, it is done with a JS execution engine. For Chrome: v8
 
 - Shortest JS program is nothing but an Empty JS file

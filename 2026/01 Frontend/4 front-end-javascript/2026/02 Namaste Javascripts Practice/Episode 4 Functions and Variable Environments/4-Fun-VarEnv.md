@@ -1,5 +1,8 @@
 # Episode 4 : Functions and Variable Environments
 
+https://www.youtube.com/watch?v=gSDncyuGw0s&list=PLxnjbfm5MCHFbRlyVCAqpJFdIzPN_IPID&index=5
+
+
 ```
 var x = 1;
 a();
