@@ -31,18 +31,7 @@ function value(a,b) // This is parameters
 }
 value(5,22) // This is arguments
 
-// 6) First Class Function
-function run(task) {
-    task();
-}
 
-run(function() {
-    console.log("Hello");
-});
-
-run(function() {
-    console.log("Bye");
-});
 
 /*
 Youtube - https://www.youtube.com/watch?v=SHINoHxvTso

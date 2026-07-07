@@ -1,5 +1,5 @@
-/* 1) Example
- This process is hoisting
+// 1) Example
+//  This process is hoisting
 
 console.log(m);
 var m = 10; // Undefined 
@@ -8,7 +8,7 @@ console.log(z); // Error
 let z = 12;
 
 console.log(n); // Error
-const n = 33; */
+const n = 33;
 
 
  /* 2) Example
