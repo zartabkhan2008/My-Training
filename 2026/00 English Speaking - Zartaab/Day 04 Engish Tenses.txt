@@ -8,7 +8,7 @@ Each has 4 types → Total = 12 tenses
 🟢 PRESENT TENSE (4 types)
 1. Simple Present
 
-👉 Subject + V1
+👉 Subject + V1+Object
 
 I eat food
 She plays cricket

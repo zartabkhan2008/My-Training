@@ -9,7 +9,7 @@ I, You, He, She, It, We, They
 
 eat, go, play, study, run
 
-3. Object (What?)
+3. Object (What?) 
 
 food, school, cricket, book
 

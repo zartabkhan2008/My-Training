@@ -1,41 +1,35 @@
-// 1) Example
-//  This process is hoisting
+// console.log(a)
+// var a = 10
+// // console.log(b)
+// let b = 100
 
+// x()
+// function x(){
+//     console.log("This is function")
+// }
+
+
+
+// Hoisting
 console.log(m);
-var m = 10; // Undefined 
+n();
+s();
 
-console.log(z); // Error
-let z = 12;
+var m = 10
 
-console.log(n); // Error
-const n = 33;
+function n() {
+    console.log("Hello");   
+}
 
+var s = function (){
+     console.log("Zartab");
+ }
 
- /* 2) Example
- Idname();
- console.log(x); // Undefine
+// Temporal Dead Zone
 
- var x = 20;
- function Idname() {
- console.log("Momin Zartab Abubakar");
- } */
-
-
-/* 3) Example
- fullname(); // print => Momin Mudassir Abubakar
- console.log(n); // n is not defined. 
- console.log(fullname); // print => Momin Mudassir Abubakar
-
-// var n = 30;
- function fullname() {
- console.log("Momin Mudassir Abubakar");
-} */
-
-
-/* 4) Example
-classid() // classid is not a function 
-console.log(classid);
-
-var classid= function () {
-    console.log("Zartab Khan");
-} */
+console.log(a); 
+let a = 10 
+console.log(b);
+const b = 200
+console.log(c);
+var c = 15
