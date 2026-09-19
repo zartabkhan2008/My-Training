@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+	
+/*
+Difference between undefined, null, and NaN
+
+In JavaScript, all three - undefined, null, and NaN - represent "absence" in some form.
+
+But they describe different kinds of absence, and mixing them up often causes confusion.
+
+Think of them like this:
+
+undefined -> "The variable exists, but no one has given it a value yet."
+null -> "I deliberately set this to nothing."
+NaN -> "I tried to get a number, but the result is nonsense."
+
+The tricky part is that:
+
+NaN === NaN; // false
+
+This happens because JavaScript treats NaN as a special "unreliable" value that never equals 
+anything - even itself.
+
+Common misconceptions
+
+1. undefined and null are interchangeable. undefined implies "not assigned yet"; null is an explicit, 
+intentional empty value.
+2. typeof null === "null". It returns "object" due to a long-standing quirk.
+3. NaN compares equal to NaN. NaN never equals anything; use Number.isNaN to test it.
+
+Practice questions
+
+1. When would you deliberately use null instead of leaving a variable undefined?
+2. How do you distinguish between a missing property and a property explicitly set to null?
+3. Why does NaN === NaN return false and how do you correctly test for NaN?
+
+
+
+*/
+	</script>
+</body>
+
+</html>

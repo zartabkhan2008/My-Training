@@ -1,0 +1,48 @@
+<!-- 💡"JavaScript-with-JC"
+
+👉 Debouncing Implementation
+
+    Debouncing is a technique used to improve the performance of applications 
+    by reducing the rate of functions call
+
+     If the function is getting called continuously, We can delay the function call for some time 
+     with the help of debouncing to optimize the performance of applications
+
+💡Let's take an example search input value-
+
+💡Other use cases :-
+👉 Continous button click event function call can be delay.
+👉 Resize of window event function call can be delay.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Debounce: Search Input</h2>
+    <input type="text" id="searchBox" placeholder="Type to search..." />
+
+    <script>
+
+        function debounce(fn, delay) {
+            let timer;
+            return function (...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => fn.apply(this, args), delay);
+            };
+        }
+
+        const handleSearch = debounce(() => {
+            console.log('Debounced: Search triggered');
+        }, 1000);
+
+        document.getElementById('searchBox').addEventListener('input', handleSearch);
+    </script>
+</body>
+
+</html>

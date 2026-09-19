@@ -27,7 +27,7 @@ btn.addEventListener("click", function() {
 });
 
 
-let likes = 0;
+let likes = 0; 
 
 document.getElementById("likeBtn")
 .addEventListener("click", function() {

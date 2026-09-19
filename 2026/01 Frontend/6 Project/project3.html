@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+ 
+    <style>
+        
+    * {
+    box-sizing: border-box;
+   }
+
+    html, body {
+    overflow-x: hidden;
+    }  
+        
+        .container{
+        position: relative;
+        }
+
+        body{
+        margin: 0px;
+        }
+
+        #box1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            border-bottom: 2px solid #a78bfa;
+            box-shadow: 0 -2px 50px rgba(167, 139, 250, 0.25);   
+            width: 100%;
+        }
+
+        ul{
+            color: black;
+            display: flex;
+            gap: 30px;
+            list-style: none;   
+        }
+
+        img{
+            display: block;
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+          
+        }
+
+        #btn1{
+        margin-bottom: 5px;
+        margin-right: 18px;
+         background-color: #00A8A8;
+        border-radius: 20px;
+       
+        }
+
+        .btn2{
+            background-color: rgba(0, 0, 0, 0.35);
+            border-radius: 20px;
+        }
+
+        .img2{
+        height: 50px;
+        width: 50px;
+        border-radius: 200px;
+        margin-top: 5px;
+        margin-left: 15px;
+        }
+
+        .content{
+         position: absolute;
+         right: 100px;
+         top: 150px;
+         color: rgb(0, 0, 0);
+        }
+        i{
+            color: rgb(255, 85, 0);
+        }
+
+        #btn3{
+         background-color: #00A8A8 ;
+        border-radius: 5px;
+        }
+
+        #box2{
+         display: flex;
+         align-items: center;
+         gap: 35px;
+         justify-content: center;
+         width: 70%;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.65);
+        position: absolute;
+        left: 225px;
+        top: 480px;
+        border: 2px solid white;
+         
+        }
+        h5{
+            margin: 0px;
+            color: white;
+        }
+        #icon{
+            color: #F4C542;
+        }
+
+        #btn4{
+             background-color: #00A8A8;
+             border-radius: 5px;
+             margin-left: 50px;
+        }
+       
+         #box3{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 35px;
+         background-color: #071b2dce;
+        color: rgb(255, 255, 255);
+        padding-top: 20px;
+        }
+        
+      
+        #title{
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 32px;
+        padding-top: 15px;
+        border-top: 1.5px solid #a78bfa;
+        box-shadow: 0 -2px 50px rgba(167, 139, 250, 0.25);
+        }
+
+       .img1{
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+
+       }
+        .images {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+        padding-left: 0px;
+        padding-bottom: -100px;
+        padding-top: -200px;
+        background-color: #071b2dce;
+        }
+
+    .card-text {
+    color: white;
+    margin-left: -215px;
+    margin-right: 25px;
+    margin-top: 110px;
+    z-index: 2;
+}
+
+.card-text h3 {
+    margin: 0;
+}
+
+.card-text span {
+    color: #F4C542;
+}
+
+
+ #title2{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    padding-bottom: -100px;
+    padding-top: -200px;
+    padding-top: 15px;
+    border-top: 1.5px solid #a78bfa;
+    box-shadow: 0 -2px 50px rgba(167, 139, 250, 0.25);
+    }
+
+.img4{
+        width: 300px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+       
+       }
+
+  .box4 {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        }
+    
+      .cardtext2{
+        display: flex;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        margin-right: 50px;
+        position: relative;
+        margin-top: -105px;
+        z-index: 2;       
+      }
+      
+
+      .smalcard{
+    color: #020202;
+    text-shadow: 1px 1px 5px black;
+    }
+
+  .smalcard span{
+    color: #ffbb00;
+   }
+
+   #footer{
+   text-align: center;
+   color: white;
+   margin: 0px;
+  
+   }
+
+  .imgfooter{
+    width: 45px;
+    height: 40px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 310px;
+    left: 500px;
+    border-top: 1.5px solid #a78bfa;
+    box-shadow: 0 -2px 50px rgba(167, 139, 250, 0.25);
+    
+   
+  }
+
+  .footer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   gap: 25px;
+   width: 100%;
+   
+   
+   
+   }
+ 
+  p{
+    text-align: center;
+  }
+   
+  small{
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+
+  .bigdata{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     justify-content: space-around;
+     background-color: #071b2dce;
+     color: white;
+     padding-top: 15px;
+     padding-bottom: 10px;
+     border-top: 1.5px solid #a78bfa;
+    box-shadow: 0 -2px 50px rgba(167, 139, 250, 0.25);
+  }
+
+  #email{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #071b2dce;
+    padding-bottom: 10px;
+    padding: 10px;
+    border-top: 1.5px solid #a78bfa;
+    box-shadow: 0 -2px 50px rgba(167, 139, 250, 0.25);    
+  }
+
+ 
+
+   
+
+ .bigfooter{
+    border-top: 1.5px solid #a78bfa;
+    box-shadow: 0 -2px 50px rgba(167, 139, 250, 0.25);  
+    width: 100%;
+    padding-top: 20px;
+ }
+
+ .box6{
+    border-top: 1.5px solid #a78bfa;
+    box-shadow: 0 -2px 50px rgba(167, 139, 250, 0.25);  
+    
+    background-color: #071b2dce;
+    padding: 2px;
+
+ }
+</style>
+
+</head>
+<body>
+    <div class="container" id="box">
+ 
+
+
+    <nav id="box1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaerHVfOjO48n-Zb7wve6eIwJL6G_aEEayC6ppaMDTA&s=10    " alt="" class="img2"> 
+    <ul>
+    <li><button class="btn2">HOME</button></li>
+    <li><button class="btn2">Destinations</button></li>
+    <li><button class="btn2">Tours</button></li>
+    <li><button class="btn2">About Us</button></li>
+    <li><button class="btn2">Pages</button></li>
+    <li><button class="btn2">Contact</button></li>
+    </ul>
+    <button id="btn1">Book Now</button>
+    </nav>
+    <img
+    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600"
+    alt="Mountain Travel"
+    id="heroImage">
+
+
+
+
+    <div class="content">
+     <i>Explore The World </i>
+     <h2>It's Time to <br>  Trevel & Explore    </h2> 
+     <button id="btn3">Explore Now</button>
+    </div>
+
+
+
+
+    <div id="box2">
+    <i id="icon" class="fa-solid fa-location-dot"></i>
+    <h5>Where to? <br> Search destrination</h5> <hr>
+
+    <i id="icon" class="fa-solid fa-calendar-days"></i>
+    <h5>Check in <br> Add date</h5> <hr>
+
+    <i id="icon" class="fa-solid fa-calendar-days"></i>
+    <h5>Check Out <br> Add date</h5> <hr>
+
+    <i id="icon" class="fa-solid fa-user-group"></i>
+    <h5>Guests <br> Add guests</h5>
+
+    <button id="btn4">Search Now</button>
+
+    </div>
+  
+
+
+
+    <div id="box3">
+
+    <i id="icon"  class="fa-solid fa-globe"></i>
+    <h4>Best Price Guarantee <p>We ensure the best prices <br> for your adventures</p></h4>
+
+    <i id="icon"  class="fa-solid fa-headset"></i>
+    <h4>24/7 Customer Support <p> We're here to help you <br> anytime,anywhere</p> </h4>
+
+    <i id="icon"  class="fa-solid fa-shield-halved"></i>
+    <h4>Secure Booking <p>Book with confidence <br> with our Secure system</p></h4>
+
+    <i id="icon" class="fa-solid fa-location-dot"></i>
+    <h4>Epert Trip Planners <p>Our travel expert plan <br> perfect trips for you</p> </h4> 
+
+    </div>
+
+    <div class="images">
+    <h2 id="title">Popular Destinations</h2>
+
+    <img src="https://a.storyblok.com/f/252707/2048x1366/403129efe3/blog_header_places_in_switzerland.webp" alt="" class="img1">
+    <div class="card-text">
+    <h3>Switzerland</h3>
+    <span>★★★★★</span> 4.9
+    </div>
+    
+    
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToRryb7QAYLx5mq34n-4fuoQDQuugGxZ3Qk_zY3LnJjA&s=10" alt="" class="img1">
+    <div class="card-text">
+    <h3>Japan</h3>
+    <span>★★★★★</span> 4.9
+    </div>
+
+    <img src="https://i0.wp.com/touristjourney.com/wp-content/uploads/2020/07/Best-Places-to-Visit-in-Iceland-3-scaled.jpg?fit=2560%2C1707&ssl=1" alt="" class="img1">
+    <div class="card-text">
+    <h3>Georgia</h3>
+    <span>★★★★★</span> 4.7
+    </div>
+
+
+    <img src="https://www.travelandleisure.com/thmb/6LKBcNi2iFSiBdTpp_4xTqHenfg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-banff-national-park-BEAUTYCANADA0623-fc3b0496f842412f9a8299f8ffd18499.jpg" alt="" class="img1">
+    <div class="card-text">
+    <h3>Canada</h3>
+    <span>★★★★★</span> 4.8
+    </div>
+    
+
+    <img src="https://www.destinations4india.com/common/media/pkg_53eddbeed2b70.jpg" alt="" class="img1">
+    <div class="card-text">
+    <h3>Indian</h3>
+    <span>★★★★★</span> 4.8
+    </div>
+
+    <img src="https://media.istockphoto.com/id/1877081913/photo/a-picturesque-plateau-against-the-backdrop-of-snow-covered-peaks-in-the-trans-ili-alatau.jpg?s=612x612&w=0&k=20&c=RRuxUEoo6wc4ZVWAtuzv_2p3uJyn8RXqsHeb8VyzCH8=" alt="" class="img1">
+    <div class="card-text">
+    <h3>Kazakhstan</h3>
+    <span>★★★★★</span> 4.7
+    </div>
+
+
+
+    <div class="box4">
+
+    <h4 id="title2">Best Deals & Offers</h4>
+     
+    <img class="img4" src="https://www.theglobetrottingdetective.com/wp-content/uploads/2021/09/The-Palm-Dubai-7-day-itinerary.jpg" alt="">
+
+   <img class="img4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTramqRkVIwJ-9ELMFbxPVcdac2eXFm-cI4i0-keOJUKg&s" alt="">
+
+    <img class="img4" src="https://assets.yld.mn/organizations/6/media/0add845ba4d2f903d06c7b5387d31bd5dbd6615e1cb2da9c99c117e226603ae1/original" alt="">
+
+    <img class="img4" src="https://exploredbymarta.com/wp-content/uploads/2022/06/Best-waterfalls-in-Iceland-1.jpg" alt="">
+   </div>
+
+   <div class="cardtext2">
+    <h3 class="smalcard">Dubai <br> <span>7 Days/6 Nights</span> $499</h3>
+    </div>
+
+    <div class="cardtext2">
+    <h3 class="smalcard">Maldives <br> <span>8 Days/ 7 Nights</span>$499</h3>
+    </div>
+
+    <div class="cardtext2">
+    <h3 class="smalcard">Mongolia <br> <span> 5 Days/ 4 Nights</span>$499 </h3>
+    </div>
+
+    <div class="cardtext2">
+    <h3 class="smalcard">Best Waterfalls <br> <span> 2 Days/ 1 Nights</span>$499</h3>
+    </div>
+
+
+    <div class="bigfooter">
+    <h2 id="footer">What out Travelers Say</h2>
+
+    <div class="footer">
+    <img class="imgfooter" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlLoh-Yad0gAUZe5RvNRAG5yEKAiFjHCKCP05sKMST288G-mHQkyJcn7M&s" alt="">
+
+    <h3>Momin Zartab Abubakar <br> <p>From India</p> </h3>
+   </div>
+    </div>
+ 
+    </div>
+
+
+
+    <div class="bigdata">
+     
+     <div id="data">
+        <big id="box5">Quick Link</big><br><br>
+        <small class="data">Home</small><br>
+        <small class="data">About</small><br>
+        <small class="data">Tours</small><br>
+        <small class="data">Contact</small><br>
+     </div>    
+    
+
+    
+       <div id="data">
+        <big id="box5">Top Destinations</big><br><br>
+        <small class="data">Japan</small><br>
+        <small class="data">Switzerland</small><br>
+        <small class="data">Kazakhstan</small><br>
+        <small class="data">Georgia</small><br>
+       </div> 
+   
+
+        
+        <div id="data">
+        <big id="box5">Support</big><br><br>
+        <small class="data">FAQs</small><br>
+        <small class="data">Privecy Policy</small><br>
+        <small class="data">Teams and Condition</small><br>
+        <small class="data">Booking Guide</small><br>
+       </div> 
+
+
+   
+    </div>
+
+     <div id="email">
+    <input  type="text" placeholder="Enter Your email">
+    <input  type="password " placeholder="Enter Your password ">
+    </div>
+
+    
+</body>
+</html>

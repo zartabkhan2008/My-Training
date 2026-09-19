@@ -1,0 +1,91 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+01) What is Scope
+==>Scope defines where a variable can be accessed in a JavaScript program
+==>Scope ka matlab hai ki program mein variable ko kaha se access kar sakte hain aur kaha se nahi
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------02) Global Scope
+==>Global scope means a variable can be accessed from anywhere in the program, for example, from inside a function as well as outside a function
+==>Global scope ka matlab hai ki variable ko program mein kahin se bhi access kar sakte hain, jaise function ke andar se bhi aur function ke bahar se bhi
+
+let x = 10; 
+
+function test() {
+    console.log(x); // accessed successfully
+}
+
+test();
+
+console.log(x); // accessed successfully
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+03)Local Scope 
+==>Local scope means a variable can be accessed only inside the function where it is declared.
+==>Local scope ka matlab hai ki variable ko sirf usi function ke andar access kar sakte hain jahan woh declare hua hai
+
+function test() {
+let x = 10; 
+console.log(x); 
+}
+
+test();
+console.log(x); // Error 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+04)Lexical Scope
+==>A child function can access the variables of its parent function. This behavior is called lexical scope
+==>Child function apne parent function ke variables ko access kar sakta hai. Is behavior ko lexical scope kehte hain
+
+let z = 10
+
+function parent() {
+let y = 20;
+
+function child() {
+console.log(z);
+console.log(y);
+}
+
+    child()
+}
+
+parent()
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+05 Scope Chain 
+When JavaScript tries to access a variable, it first checks the current scope.
+If the variable is not found there, it checks the parent/outer scope.
+If it is still not found, it continues searching up to the global scope.
+This searching process is called the Scope Chain
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let a = 10; // Global scope
+
+function parent() {
+let b = 20; // Parent scope
+
+function child() {
+let c = 30; // Child scope
+
+console.log(c);
+console.log(b);
+console.log(a);
+}
+
+child();
+}
+
+parent();
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+JavaScript kaise search karega?
+console.log(c);
+
+c child function ke current scope mein mil gaya. ✅
+
+console.log(b);
+
+b child ke scope mein nahi hai ❌
+Toh JavaScript parent scope mein gaya → b mil gaya. ✅
+
+console.log(a);
+
+a child scope mein nahi mila ❌
+Parent scope mein bhi nahi mila ❌
+Phir JavaScript global scope mein gaya → a mil gaya. ✅
+
+This process is scope chain.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

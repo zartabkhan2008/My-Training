@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Not defined ==>
+
+Agar koi object/variable declare hi nahi hua / Memory Allocation phase mein mila hi nahi, aur hum usko access karne ki koshish karein, to woh Not defined hota hai
+
+Example ==>
+console.log(a); //Declare nahi kiya + access kiya = Not Defined
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Undefine ==>
+Jab variable declare kiya gaya hai lekin value assign nahi ki gayi, to uski current value undefined hoti hai. Lekin jab variable declare hi nahi kiya gaya aur code mein usko call/access kiya, to woh not defined hota hai
+
+var b = 
+console.log(b); // value assign nahi hui
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example ==>
+
+// undefined vs not defined in JS
+
+console.log (x); // Not Defined
+
+var y =25 ;
+console.log (y); // 25
+
+console.log (a); // a is not defined
+
+var b = 
+console.log(b); // undefined
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

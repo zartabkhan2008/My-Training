@@ -1,3 +1,12 @@
+🟢 Basic JS
+Variables → Data Types → Operators → Conditions → Loops → Basic Functions → Basic Arrays → Basic Objects
+
+🟡 Intermediate Core JS
+ES6 → Array Methods → Object Methods → Destructuring → Spread/Rest → this → call/apply/bind
+
+🔴 Advanced Core JS
+Execution Context → Hoisting → TDZ → Scope Chain → Closure → Async JS → Promises → async/await → Event Loop
+
 Looking to Master JavaScript?
 
 then the below JavaScript Tree will help and guide you 💯

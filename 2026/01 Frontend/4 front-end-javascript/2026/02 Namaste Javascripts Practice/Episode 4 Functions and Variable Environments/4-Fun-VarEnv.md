@@ -3,7 +3,8 @@
 https://www.youtube.com/watch?v=gSDncyuGw0s&list=PLxnjbfm5MCHFbRlyVCAqpJFdIzPN_IPID&index=5
 
 
-```
+------------------------------------------------------------------------------
+
 var x = 1;
 a();
 b();   // we are calling the functions before defining them. This will work properly, as seen in Hoisting (Ep3)
@@ -20,7 +21,7 @@ function b() {
   console.log(x);
 }
 
-```
+------------------------------------------------------------------------------
 
 Outputs:
 
@@ -29,6 +30,8 @@ Outputs:
 > 100
 
 > 1
+
+------------------------------------------------------------------------------
 
 ### Code Flow
 

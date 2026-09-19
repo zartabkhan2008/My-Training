@@ -1,0 +1,39 @@
+1)let age = 15;
+
+let age → Declaration
+= 15 → Initialization
+15 → Value
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2)                                                                                                    Hoisting
+Hoisting is a JavaScript mechanism where variable and function declarations are moved or registered in memory before the code is executed
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Example (1)
+var c = 10;
+function d () {
+console.log("Hi Zartab");
+}
+
+d();
+console.log(c);
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Example (2)
+b();
+console.log(a);
+
+var a = 10;
+function b () {
+console.log("Hi Zartab");
+}
+
+b function hai, isliye poora function Memory Creation Phase mein store ho jata hai. a var hai, isliye a memory mein register hota hai aur initially undefined milta hai. Agar execution mein a = 10 se pehle console.log(a) chalega, toh undefined print hoga. Baad mein a = 10 hone par a ki value 10 ho jayegi
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// code example 3
+
+getName();
+console.log(x); 
+
+function getName(){
+console.log("Hi Zartab");
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

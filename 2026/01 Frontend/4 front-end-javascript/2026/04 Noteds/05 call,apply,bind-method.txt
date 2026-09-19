@@ -1,0 +1,42 @@
+001) What is call,apply,bind method ==>We can borrow a function and use it with another object 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// 01 call method
+let name = {
+    firstName : "Naqeem",
+    lastName : "Khan"
+}
+
+let  printFullName = function(city,state) {
+ console.log(this.firstName + ' ' + this.lastName + " from " + city + ' ' +state)
+}
+
+printFullName.call(name, "Bhiwandi", "Maharashtra")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+call method noted ==>
+printFullName ek function hai.
+name ek object hai.
+call() function ko immediately execute karta hai.
+call(name, ...) ki wajah se function ke andar this = name ho jata hai.
+Arguments ek-ek karke pass hote hain.
+Isliye this.firstName → name.firstName aur this.lastName → name.lastName. ==> call () method ki waja sai this = name hota hain 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// 02 apply method
+let name2 = {
+    firstName : "Raza",
+    lastName : "Khan"
+}
+
+let printName = function(city,state) {
+console.log(this.firstName + ' ' + this.lastName + " from " + city + ' ' +state)
+}
+
+printName.apply(name2, ["Mumbai", "Maharashtra"])
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+apply method Noted==>
+printName ek function hai.
+name2 ek object hai.
+apply() function ko immediately execute karta hai.
+apply(name2, ...) ki wajah se function ke andar this = name2 ho jata hai.
+Arguments array ke andar pass hote hain.
+Isliye this.firstName → name2.firstName aur this.lastName → name2.lastName. ==> apply() method ki wajah se this = name2 hota ha
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

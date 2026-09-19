@@ -1,0 +1,42 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+01) Block Scope ==>
+English==>Block scope means a variable can be accessed only inside the block { } where it is declared.
+Hinglish==>Block scope ka matlab hai ki variable ko sirf usi block { } ke andar access kar sakte hain jahan woh declare hua hai
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+{
+let a = 10;
+const b = 20;
+var c = 30;
+
+console.log(a); // 10
+console.log(b); // 20
+console.log(c); // 30
+}
+
+
+console.log(a); // Error
+console.log(b); // Error
+console.log(c); // 30
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) let and const → They work only inside the block { } where they are created.
+1) let and const → Ye sirf usi block { } ke andar kaam karte hain jahan ye create/declare kiye gaye hain.
+
+2) var → It does not follow block rules, so you can use it outside the block also
+2) var → Ye block ke rules ko follow nahi karta, isliye ise block ke bahar bhi use/access kar sakte hain.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------02) Shadowing ==>
+English ==> Shadowing happens when a variable in an inner scope has the same name as a variable in the outer scope. The inner variable hides the outer variable. This process is called shadowing
+Hinglish ==> Shadowing tab hoti hai jab inner scope mein outer scope ke variable ke same naam ka variable declare hota hai. Inner variable outer variable ko hide kar deta hai. Is process ko shadowing kehte hain.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let x = 10;
+
+function test() {
+    let x = 20;
+    console.log(x); // 20
+}
+test();
+
+console.log(x); // 10
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+English ==> let and const are block-scoped. When we create a variable with the same name inside a block, it hides the outer variable. Therefore, inside the block, the inner value is printed, and outside the block, the outer value is printed.
+Hinglish ==> let aur const block-scoped hote hain. Jab hum block ke andar same naam ka variable create karte hain, toh woh outer variable ko hide kar deta hai. Isliye block ke andar inner value print hoti hai, aur block ke bahar outer value print hoti hai.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

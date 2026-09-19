@@ -1,0 +1,115 @@
+JavaScript setTimeout() & setInterval() — 16 Advanced Interview Questions That Separate Good Developers from Great Ones 👀
+
+Save this for your next interview ↓
+
+━━━━━━━━━━━━━━
+
+Q1. Is setTimeout() synchronous or asynchronous?
+
+Answer:
+setTimeout() itself executes synchronously because it registers the timer immediately, but the callback execution is asynchronous.
+
+━━━━━━━━━━━━━━
+
+Q2. Why does setTimeout(0) not execute immediately?
+
+Answer:
+Because zero means minimum delay, not instant execution. The callback waits until the Call Stack becomes empty.
+
+━━━━━━━━━━━━━━
+
+Q3. What actually manages setTimeout() execution?
+
+Answer:
+The browser (or runtime environment) manages timers, not the JavaScript engine.
+
+━━━━━━━━━━━━━━
+
+Q4. Does setTimeout() go directly into the Call Stack after delay completion?
+
+Answer:
+No. It first moves into the Task Queue and then waits for Event Loop approval.
+
+━━━━━━━━━━━━━━
+
+Q5. Why does UI freeze affect setTimeout() timing?
+
+Answer:
+Because JavaScript runs on a single thread. Long-running tasks block timer execution.
+
+━━━━━━━━━━━━━━
+
+Q6. Why can two timers with the same delay execute at different times?
+
+Answer:
+Execution depends on queue state, stack availability, rendering work, and blocking operations.
+
+━━━━━━━━━━━━━━
+
+Q7. What happens if setInterval() callback takes longer than its interval?
+
+Answer:
+New executions continue getting scheduled which may create overlapping behavior.
+
+━━━━━━━━━━━━━━
+
+Q8. Why is recursive setTimeout() often preferred over setInterval()?
+
+Answer:
+It guarantees the next execution starts only after the current one finishes.
+
+━━━━━━━━━━━━━━
+
+Q9. Does JavaScript execute timers during rendering?
+
+Answer:
+No. Rendering and JavaScript execution compete for the main thread.
+
+━━━━━━━━━━━━━━
+
+Q10. Why do inactive browser tabs slow timers?
+
+Answer:
+Browsers throttle background tasks to reduce CPU and battery usage.
+
+━━━━━━━━━━━━━━
+
+Q11. What is timer drift?
+
+Answer:
+Timer drift happens when actual execution gradually moves away from intended timing.
+
+━━━━━━━━━━━━━━
+
+Q12. Can setTimeout() create memory leaks?
+
+Answer:
+Yes. Closures inside timer callbacks may keep unnecessary objects alive.
+
+━━━━━━━━━━━━━━
+
+Q13. Why should timers be cleaned in React?
+
+Answer:
+To avoid updating unmounted components and leaking memory.
+
+━━━━━━━━━━━━━━
+
+Q14. Does Promise execute before setTimeout()?
+
+Answer:
+Usually yes. Microtasks execute before macrotasks.
+
+━━━━━━━━━━━━━━
+
+Q15. Why can nested setTimeout() become slower?
+
+Answer:
+Browsers apply minimum delay rules for deeply nested timers.
+
+━━━━━━━━━━━━━━
+
+Q16. Why is requestAnimationFrame() preferred for animations?
+
+Answer:
+Because it aligns execution with browser rendering cycles.

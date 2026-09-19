@@ -1,35 +1,50 @@
-// console.log(a)
-// var a = 10
-// // console.log(b)
-// let b = 100
+//                   Hoisting
+// Hoisting is a JavaScript mechanism where variable and function declarations are moved or registered in memory before the code is executed
 
-// x()
-// function x(){
-//     console.log("This is function")
-// }
-
-
-
-// Hoisting
-console.log(m);
-n();
-s();
-
-var m = 10
-
-function n() {
-    console.log("Hello");   
+// Example (1)
+var c = 10;
+function d () {
+console.log("Hi Zartab");
 }
 
-var s = function (){
-     console.log("Zartab");
- }
-
-// Temporal Dead Zone
-
-console.log(a); 
-let a = 10 
-console.log(b);
-const b = 200
+d();
 console.log(c);
-var c = 15
+
+
+// Example (2)
+b();
+console.log(a);
+
+var a = 10;
+function b () {
+console.log("Hi Zartab");
+}
+
+/* code example 3
+
+y();
+console.log(x); 
+
+function y(){
+console.log("Hi Zartab");
+}
+*/
+
+//                           Temporal Dead Zone
+
+// Code Eaample 4
+
+/*
+console.log(s);
+let s = 10;   
+ReferenceError: Cannot access 's' before initialization
+Reason
+
+console.log(m);
+const m = 10;
+ReferenceError: Cannot access 'm' before initialization
+
+console.log(z);
+var z = 10
+
+*/

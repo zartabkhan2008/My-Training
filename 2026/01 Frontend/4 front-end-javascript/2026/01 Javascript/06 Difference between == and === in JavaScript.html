@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+	/*Difference between == and === in JavaScript
+	
+	In JavaScript, both the double equals (==) and triple equals (===) are comparison operators used to 
+	check if two values are equal, but they work differently. The difference lies in whether they perform 
+	type conversion before comparing.
+
+	The double equals operator (==) checks for equality after converting both values to a common type. 
+
+	This process is called type coercion. JavaScript tries to make both sides the same type before 
+	comparing, which can sometimes produce unexpected results. The triple equals operator (===) 
+	checks for equality without converting types.
+	It compares both value and data type exactly as they are.
+
+	Because of this, == is called the loose equality operator, and === is called the strict equality operator.
+	When you use ==, JavaScript may convert strings, numbers, booleans, or even null and undefined to 
+	make the comparison possible. This can make your code unpredictable if you are not aware of how 
+	coercion works.
+
+	For example:js
+
+	console.log(5 == "5"); // true, because "5" is converted to a number
+	console.log(0 == false); // true, because false is converted to 0
+	console.log(null == undefined); // true, special rule in JS
+	console.log("0" == false); // true, because both sides are converted to 0
+
+
+	All these return true even though the data types are different. This happens because the == operator 
+	tries to make the values the same type before comparing.
+	Now, let's look at the === operator.
+	
+	js
+
+	console.log(5 === "5"); // false, number vs string
+	console.log(0 === false); // false, number vs boolean
+	console.log(null === undefined); // false, different types
+	console.log("0" === false); // false, string vs boolean
+
+	With ===, no type conversion happens. JavaScript checks both the type and the actual value. If either 
+	differs, the result is false.
+	To understand this better, you can think of === as a stricter form of comparison. It is like asking, "Are 
+	these two values exactly the same, including their type?" On the other hand, == is like asking, "Can 
+	these two values be considered the same after some conversion?"
+	When comparing objects or arrays, both operators behave the same way. They only check if both 
+	sides refer to the exact same object in memory.
+
+	js
+
+	let a = [1, 2];
+	let b = [1, 2];
+	console.log(a == b); // false
+	console.log(a === b); // false
+	let c = a;
+	console.log(a === c); // true, because both point to the same object
+
+	Common misconceptions
+
+	1. Some developers believe == and === are interchangeable. They are not. Using == can cause 
+	unexpected true or false results because of type coercion.
+	2. null and undefined are equal with == but not with ===. This can lead to subtle bugs if you are 
+	checking for missing values.
+	3. Comparing objects with == or === never compares their contents, only their references.
+	4. Using == for numeric comparisons with strings or booleans can create unpredictable results, 
+	especially when data comes from user input or APIs.
+
+	Practical examples js
+	console.log(1 == true); // true, true becomes 1
+	console.log(1 === true); // false, number vs boolean
+	console.log("10" == 10); // true, "10" becomes 10
+	console.log("10" === 10); // false, string vs number
+	console.log("" == false); // true, both convert to 0
+	console.log("" === false); // false, string vs boolean
+
+	As you can see, == tries to help by converting types, but this often causes confusion. That is why 
+	most developers use === by default.
+
+	Best practices
+
+	Always use === unless you specifically want type coercion. The strict equality operator makes your 
+	code more predictable and easier to debug. If you really need to compare values with different types, 
+	convert them manually using functions like Number(), String(), or Boolean() before comparing.
+
+	console.log(Number("5") === 5); // true, both are numbers now
+
+	Quick reference summary
+
+	Practice questions
+
+	1. What is the key difference between == and === in JavaScript?
+	2. Predict the output of:
+
+	console.log("" == 0);
+	console.log("" === 0);
+
+	3. Why does null == undefined return true but null === undefined return false?
+	4. How would you safely compare a string number like "10" with an actual number without 
+	unexpected results?
+*/
+    </script>
+</body>
+
+</html>

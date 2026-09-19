@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+        /*
+        Parent ==>
+        display: grid
+        grid-template-columns
+        grid-template-rows
+        gap
+        row-gap
+        column-gap
+        */
         .container{
             display: grid;
 
@@ -13,24 +23,41 @@
             grid-template-columns: 100px 200px auto; 
             grid-template-columns: 1fr 6fr 2fr; 
             grid-template-columns: repeat(4,auto); 
-            grid-gap: 2rem; */
+            grid-gap: 2rem; 
+            column-gap: 20px;*/
 
             /*         grid-template-rows           */
             /*grid-template-rows: 200px 100px 100px ;
             grid-template-rows: 100px 200px auto;
             grid-template-rows: 1fr 2fr 3fr 4fr; 
             grid-template-columns: repeat(3,auto);
-            grid-gap: 2rem; */
+            grid-gap: 2rem;
+            row-gap: 2rem; */
+
+           /*
+           Child ==>
+           grid-column
+           grid-row
+           grid-column-start
+           grid-column-end
+           grid-row-start
+           grid-row-end
+           grid-area
+           */
 
             /*               Span                    */
-            /*.item:first-child{
+            /*
+            .item:first-child{
             grid-column: 1 / span 2;
-            grid-row: 1 / span 2;  }*/
+            grid-row: 1 / span 2;  }
+            */
            /*grid-template-columns: repeat(4,auto);
             grid-gap: 1rem;
             grid-column-gap: 2rem;
             grid-row-gap: 7rem; */
         }
+
+        
         .item{
             background-color: red;
             border: 2px solid black;

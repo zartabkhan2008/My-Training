@@ -1,0 +1,46 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+01) Normal Function
+English ==> A function is a reusable block of code that performs a specific task
+
+name ();
+function name() {
+    console.log("Hi Zartab");
+}
+name();
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+02) Function Declaration vs Function Expression
+English ==> Function declaration is defined using the function keyword with a function name. Function expression stores a function inside a variable
+ 
+// Declaration
+function add() {
+  console.log("Hello");
+}
+
+// Expression
+const add = function() {
+  console.log("Hello");
+};
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+03) What is an Anonymous Function?
+Answer: A function without a name is called an anonymous function.
+
+const greet = function() {
+  console.log("Hello");
+};
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+04) What is a Named Function Expression?
+English ==> A function expression that has a name is called a named function expression
+
+const greet = function sayHello() {
+  console.log("Hello");
+};
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+05) Parameters vs Arguments
+English ==> Parameters are variables defined in the function. Arguments are the actual values passed when calling the function
+
+function add(a, b) {  // a and b = parameters
+  return a + b;
+}
+
+add(10, 20);          // 10 and 20 = arguments
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,76 @@
+Situation                                                           Use        
+
+Navbar items ek line mein                            Flexbox 
+Buttons ko horizontally arrange karna          Flexbox 
+Card ke andar content                                  Flexbox 
+3×3 image gallery                                           Grid    
+Product card grid                                            Grid    
+Dashboard rows + columns                           Grid    
+Complete page layout                                    Grid    
+
+
+
+box-sizing: border-box;
+radial-gradient(circle at top left, #312e81, transparent 40%),
+radial-gradient(circle at bottom right, #0891b2, transparent 40%),
+#080b1a;
+
+
+min-height: 430px;
+backdrop-filter: blur(18px);
+box-shadow:
+0 25px 60px rgba(0,0,0,0.45),
+0 0 30px rgba(34,211,238,0.15);
+outline: none;
+
+
+transition: 0.3s;
+#username::placeholder,
+#password::placeholder{
+    color: #cbd5e1;
+}
+
+
+#username:focus,
+#password:focus{
+    border-color: #22d3ee;
+
+
+    box-shadow:
+        0 0 0 3px rgba(34,211,238,0.15),
+        0 0 20px rgba(34,211,238,0.2);
+}
+
+
+background: linear-gradient(
+        135deg,
+        #06b6d4,
+        #6366f1
+    );
+
+
+cursor: pointer;
+ transition: 0.3s;
+transform: translateY(-3px);
+
+
+scroll-behavior: smooth;
+backdrop-filter: blur(12px);
+overflow: hidden
+filter: brightness(.55);
+
+
+
+object-fit: cover;
+   background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.85),
+            rgba(0,0,0,.25)
+        );
+}
+text-shadow: 0 5px 20px rgba(0,0,0,.6);
+
+
+
+

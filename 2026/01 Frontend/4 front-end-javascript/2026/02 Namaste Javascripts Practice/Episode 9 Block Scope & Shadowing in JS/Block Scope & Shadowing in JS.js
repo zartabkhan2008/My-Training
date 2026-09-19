@@ -1,4 +1,7 @@
-//                * Block Scope *
+/*                       * Block Scope *
+Block scope means a variable can be accessed only inside the block { } where it is declared.
+*/
+
 {
 let a = 10;
 var b = 20;
@@ -14,7 +17,10 @@ console.log(c);
 2) var → It does not follow block rules, so you can use it outside the block also.
 */
 
-//                     * Shadowing *
+
+/*                   * Shadowing *
+Block scope means a variable can be accessed only inside the block { } where it is declared
+*/
 
 let x = 10
 {

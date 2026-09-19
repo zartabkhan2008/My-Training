@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+01 this inside global space
+
+console.log(this); // globalObject
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Global space mein `this` → Global Object
+
+2. Browser mein Global Object → window
+
+3. Therefore:
+   this === window → true
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Question: what is the value of this inside global space?
+
+Answer==> It is global object that can be different it can be window, it can be global it can be something else depends on 
+where you are running that peice of code.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// 02 this inside a function
+
+function x(){
+    console.log(this)
+}
+x()
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+this inside a function ==> inside function the value of this keywords depends on strict and non-strict mode.
+
+for strict mode the value will be undefined.
+for non strict mode the value will be window.
+
+Note : this keyword works differently in strict mode and  non-strict mode.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+03 Why does this become window inside a function in non-strict mode?
+Answer ==> if the value of this keyword is undefined or null this keyword  will be replaced with global object only in non-strict mode
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// 04 this keyword value depends on how the function is called
+function y(){
+    console.log(this)
+}
+y()               ==> this is undefined
+window.y()  ==> this is window
+
+Noted ==>
+if the function is called without any reference then the value is undeined, but if call it with reference like this "window.y()" then it is the calling object means window object.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

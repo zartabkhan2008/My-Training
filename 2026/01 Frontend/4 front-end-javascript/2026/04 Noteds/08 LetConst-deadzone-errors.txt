@@ -1,0 +1,51 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                              * TDZ (Temporal Dead Zone) *
+
+English ==> The TDZ is the period when a let or const variable has been hoisted but cannot be accessed before it is initialized. This period is called the Temporal Dead Zone
+
+Hinglish ==>TDZ woh time period hai jab let ya const variable hoist ho chuka hota hai, lekin initialization se pehle us variable ko access nahi kar sakte. Is period ko Temporal Dead Zone kehte hain
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Eample ==>
+
+console.log(a); ==> undefined
+var a = 10
+
+console.log(b); ==> ReferenceError
+let b = 20
+console.log(b) ==> 20
+
+console.log(c); ==> ReferenceError
+const c = 30
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+01) var → undefined kyun?
+console.log(a); // undefined
+var a = 10;
+
+Hoisting ke time var a memory mein undefined ke saath initialize ho jata hai.
+a → undefined
+Isliye console.log(a) par error nahi aata, undefined print hota hai.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+02) let → initialization se pehle access kyun nahi?
+console.log(b); // ReferenceError
+let b = 20;
+
+Hoisting ke time let b memory mein create hota hai, lekin initialize nahi hota.
+b → uninitialized
+let b = 20 tak b TDZ mein hota hai.
+
+Isliye initialization se pehle access karne par:
+ReferenceError
+
+03) const → same reason
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+01) let:
+let a;       → declaration
+a = 10;      → assignment
+console.log(a) ✅ allowed
+
+02) const:
+const b; 
+b = 20 ;    
+console.log(b);  → ❌ not allowed
+
+

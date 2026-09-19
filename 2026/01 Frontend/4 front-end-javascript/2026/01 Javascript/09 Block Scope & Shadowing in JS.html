@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+	
+	/*
+	
+	What is scope in JavaScript (global, function, block)
+	
+	Scope is the area of a program where a variable or function name is visible and can be accessed. 
+	Understanding scope helps you predict where a value can be read or changed and prevents 
+	accidental name collisions. In JavaScript there are three primary kinds of scope you will use every 
+	day: global scope, function scope, and block scope. There is also module scope in ES modules, which 
+	behaves like file level scope, but this note focuses on the everyday three.
+
+	Global scope means a name is available everywhere in your program after it is defined. In a browser, 
+	global variables become properties of the window object. In Node.js, the global object is different, 
+	and variables declared with let or const at the top level of a module are not added to the global 
+	object. Global scope is convenient but dangerous because any part of the program can read or 
+	change that value. Prefer limiting scope where possible.
+	
+	Block scope is created by a pair of braces. The most common blocks are those from if, for, while, try, 
+	and just plain braces. Variables declared with let or const are block scoped. They exist only inside 
+	that block and are not accessible outside. This prevents accidental leaks and makes code easier to 
+	reason about. Classes declared with class also follow block scoping rules. Variables in block scope 
+	have a temporal dead zone before the declaration line, which means you cannot access them before 
+	their declaration executes.
+	
+	Shadowing happens when an inner scope declares a name that already exists in an outer scope. 
+	Inside the inner scope, the new declaration hides the outer one. Shadowing can be useful for clarity 
+	when parameter names repeat, but overusing it can reduce readability.
+	
+	Lexical scope means that JavaScript decides which variables are visible based on where functions and 
+	blocks are written in the code, not based on where they are called at runtime. A function can access 
+	variables from the scope where it was defined. This idea is the foundation for closures.
+	
+	Examples
+	
+	// global scope example
+	
+		let siteName = "Docs";
+		function show() {
+		22
+		console.log(siteName); // can read global
+		}
+
+	show();
+
+	// function scope with var
+	
+		function demo() {
+		var x = 1;
+		if (true) {
+		var x = 2; // same function-scoped variable
+		}
+		console.log(x); // 2
+		}
+		demo();
+
+	// block scope with let and const
+	
+	function demo2() {
+	let a = 1;
+	if (true) {
+	let a = 2; // different, block-scoped variable
+	const b = 3;
+	console.log(a, b); // 2 3
+	}
+	console.log(a); // 1
+	// console.log(b); // ReferenceError
+	}
+	
+	demo2();
+
+
+	// shadowing and lexical scope
+	
+	const value = "outer";
+	function make() {
+	const value = "inner";
+	return function () {
+	23
+	console.log(value); // reads "inner" because of lexical scope
+	};
+	}
+	make()();
+	
+	Common misconceptions
+
+	1. Variables declared with var in a block are block scoped. In reality, var is function scoped and leaks 
+	out of the block.
+	2. Global variables declared with let or const become properties on window. In browsers only var at 
+	the top level does that; let and const at top level of a script create global bindings but not window 
+	properties, and in modules they are module scoped.
+	3. A variable defined inside a function can be accessed after the function returns. This is only possible 
+	through closures, not by direct access.
+
+	Practice questions
+
+	1. Explain the difference between function scope and block scope using a short code example.
+	2. Why is global scope considered risky, and how can you reduce reliance on it in a large application.
+	3. What is shadowing, and when could it reduce readability
+
+	*/
+        // Definition: Variables declared with let or const are only accessible within the block {} they are defined in.
+
+        {
+            let x = 10;
+            const y = 20;
+        }
+        // console.log(x); // ❌ ReferenceError
+        // console.log(y); // ❌ ReferenceError
+
+        // Common Block Scopes:
+        // if, for, while statements
+        // Any {} block, even standalone
+
+        // 🕶️ Shadowing
+
+        // Definition: Shadowing occurs when a variable in an inner scope has the same name as one in an outer scope.
+        //  The inner variable temporarily hides (or “shadows”) the outer one within its scope.
+
+        // Example 1: Function Scope Shadowing
+
+        let name = "Ramzan";
+
+        function greet() {
+            let name = "Ali"; // shadows outer 'name'
+            console.log(name); 
+        }
+
+        greet();
+        console.log(name); 
+
+        // ✅ Example 2: Block Scope Shadowing
+
+        let score = 90;
+
+        {
+            let score = 75; // shadows outer 'score'
+            console.log(score); // ✅ 75
+        }
+
+        console.log(score); // ✅ 90
+
+        // ✅ Example 3: Shadowing with var (Not True Shadowing)
+
+        var age = 30;
+
+        {
+             age = 25; // overwrites outer 'age'
+            console.log(age); // ✅ 25
+        }
+
+        console.log(age); // ✅ 25 (not shadowed — overwritten!)
+
+        // ✅ Example 4: Shadowing in Loops
+
+        let i = 100;
+
+        for (let i = 0; i < 3; i++) {
+            console.log(i); // ✅ 0, 1, 2
+        }
+
+        console.log(i); // ✅ 100
+
+        // ✅ Example 5: Shadowing in Nested Functions
+
+        let message = "Hello";
+
+        function outer() {
+            let message = "Hi";
+
+            function inner() {
+                let message = "Hey";
+                console.log(message); // ✅ "Hey"
+            }
+
+            inner();
+            console.log(message); // ✅ "Hi"
+        }
+
+        outer();
+        console.log(message); // ✅ "Hello"
+
+    </script>
+</body>
+
+</html>

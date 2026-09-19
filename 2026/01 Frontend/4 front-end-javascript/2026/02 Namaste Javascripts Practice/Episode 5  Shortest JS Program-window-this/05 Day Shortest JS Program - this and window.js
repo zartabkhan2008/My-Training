@@ -12,9 +12,6 @@ Question: what is the value of this inside global space?
 Answer: It is global object that can be different it can be 
 window, it can be global it can be something else depends on 
 where you are running that peice of code.
-
-Note : this keyword works differently in strict mode and 
-non-strict mode.
 ------------------------------------------------------------*/
 
 // 02 this inside a function
@@ -29,6 +26,9 @@ and non-strict mode.
 
 for strict mode the value will be undefined.
 for non strict mode the value will be window.
+
+Note : this keyword works differently in strict mode and 
+non-strict mode.
 ------------------------------------------------------------*/
 
 // 03 this inside non-strict mode (this-substitution)
@@ -56,7 +56,7 @@ const obj = {
         console.log(this.a)
     }
 }
-obj.z()
+obj.z() 
 /*
 first of all what is object method?
 if you create a function inside an object this function known
@@ -65,5 +65,3 @@ as method, so now x is the method of an object obj.
 this.a so this will reference to object and this.a will to that
 property a, so it will print 10 because this.a means object
 ------------------------------------------------------------*/
-
-// 06 call apply bind

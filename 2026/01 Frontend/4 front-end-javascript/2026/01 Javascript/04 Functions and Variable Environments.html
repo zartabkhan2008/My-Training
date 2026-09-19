@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+	
+		/*  What are functions In JavaScript
+
+		In JavaScript Functions are first class objects, Means we can create a function,assign them to variables or pass them as arguments
+		to a function or return them from a function and even though we can store them in object / array
+		
+		when a function is executed ,JavaScript creates an execution context
+
+			1 Variable Environment
+			2 Lexical Environment (let, const ,inner functions)
+			3 this binding
+			4 arguments object
+			5 scope Chain linking to outer environment with (this enabled closure) */
+			
+			<!-- function Declaration -->
+			
+			function addition(value1,value2) {
+			return value1+value2;
+			}
+			
+			<!-- Function Expression -->
+
+			const additionExpression = function addition(value1,value2) {
+			return value1+value2;
+			}
+
+			<!-- Arrow Function -->
+
+			const arroFunc = (a , b) => a + b;
+
+			<!-- Function Constructor -->
+
+			const add = new Function('a' , 'b',' return a + b ')
+
+
+
+			/* Anonymous Functions :
+		
+		    In JavaScript a function that doesn't have name is called anonymous function.
+			These types of function use in Callbacks,Event Handlers and functional programming */
+			
+			<!-- function Declaration -->
+			
+			(function() {
+			console.log('This is IIFE')
+			})()
+			
+			<!-- Function Expression -->
+
+			setTimeout(function () {
+			  console.log("Hello after 1 second");
+			}, 1000);
+		
+			<!-- Function Constructor -->
+			
+			let greests= function(){console.log('greets')}
+			
+			<!-- Function Constructor -->
+
+			document.getElementById("btn").addEventListener("click", function() {
+				console.log("Button Clicked!");
+			});
+			
+	    /* Named Function Expression :
+		
+		In JavaScript a named function is kind of anonymous function that has explicit name, 
+		which can be used inside the function itself for recursion and debugging */
+		
+		Example 01 :
+		
+		const sayHi = function greetUser(name) {
+		  console.log("Hi, " + name + "!");
+		};
+
+		sayHi("Bob");        // Hi, Bob!
+		greetUser("Bob");
+		
+		Example 02 :
+
+		function factorial(n) {
+		if (n <= 1) return 1;
+		return n * factorial(n - 1);
+		}
+		console.log(factorial(5)); // 120
+		
+		/* What is a Pure Functions in JavaScript :
+
+		A pure function is a function that:
+
+			1 Deterministic -Always produces the same output for the same input.
+			2 No Side Effects - does not modify external state (like global variables, DOM, or files).(Has no side effects (does not modify external states)).
+			3 A function where we don't use any global variable i.e (Does not rely on external state only uses its arguments.)*/
+
+
+		/* First-Class Functions in JavaScript :
+		
+		functions which can do following things:
+
+			1 Assigned to variables (fun can be stored into another variable)
+			2 Passed as arguments to other functions (we can pass a fun as a args while executing another fun).
+			3 Returned from functions (we can return a function from a fun)
+			4 Stored in data structures like arrays or objects (means we store func in object keys or we can create array os function)
+	
+		Why First-Class Functions Are Important
+
+			1 Enable callbacks, event handling, and higher-order functions.
+			2 Allow functional programming patterns like map, filter, and reduce.
+			3 Functions can be returned and composed, leading to flexible and reusable code.
+		*/
+		
+		
+	/* Higher-Order Functions in JavaScript
+
+	A Higher-Order Function (HOF) is a function that takes another function as an argument or returns a 
+	function as its result. This is possible because JavaScript has first-class functions, meaning functions 
+	can be treated like variables (assigned, passed, and returned)
+			
+	JavaScript provides many built-in Higher-Order Functions in Array.prototype like: .map() , .filter(), .reduce(), .forEach(), .sort()*/	
+		
+ /* What is a callback function in JavaScript?
+		
+	A callback function is a function passed as an argument to another function and executed later.
+	This is useful for handling asynchronous operations, event handling, and higher-order functions.
+		
+	A callback function is just a function that is passed as an argument to another function 
+	and gets executed after some operation completes. whereas Promises give us a much cleaner 
+	and more structured way to deal with async operations, especially when chaining multiple tasks. */
+	
+	
+	/* Self-Executing Function :
+		
+	A Self-Executing Function, also known as an Immediately Invoked function , is a function that executes immediately after being defined.*/
+ 
+ 
+ /* Generator function :
+		
+		A generator is a special type of function that can be paused and resumed.
+
+				1 Declared using function* syntax
+				2 use yeild keyword to pause execution
+				3 Returns a special object —with .next() method
+				4 return finishes the generator */
+ 
+ </script>
+</body>
+
+</html>

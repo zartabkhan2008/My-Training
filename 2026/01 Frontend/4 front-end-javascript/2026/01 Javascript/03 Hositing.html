@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        debugger;
+        /* 💡"JavaScript-with-JC"
+ 👉 Hoisting
+
+        Hoisting is a JavaScript behavior where variable and function declarations are moved ("hoisted")
+		to the top of their scope during compilation, before the code executes.
+		
+		When JavaScript executes your code, it first performs a setup step where it registers all the variables 
+		and functions it can find. This behavior is known as hoisting. Because of hoisting, some variables and 
+		functions seem to exist even before the line where they are defined. However, different declarations 
+		are hoisted in different ways.
+		
+		Function declarations are available early and can be used anywhere in their scope. Variables declared 
+		using var are also hoisted but start with a value of undefined. Variables declared with let, const, or 
+		class are hoisted too, but they are left uninitialized. If you try to access them before their declaration 
+		line, JavaScript throws a ReferenceError. This situation is known as the Temporal Dead Zone (TDZ).
+		
+		 
+		 When javaScript engine starts executing the code, It creates the global execution context in callstack
+		 Each context in callstack has two phases:-
+		 
+		 1) Memory Creation
+		 2) Code Execution
+		 
+		 During Memory creation phase, JavaScript engine moves the variables and function declarations at the top of code, 
+		 and this is known as Hoisting. 
+		 
+		 
+ 
+ 💡 3 Things you should know about "Hoisting"
+ 
+ 👉 Hoisting of Variables ( var, let, const and global ) ?
+ 👉 Hoisting of Functions ( declaration and expression ) ?
+ 👉 Hoisting of Classes ( declaration and expression ) ?
+ 
+ 
+	Common pitfalls & misconceptions
+  
+	There are several common misconceptions about hoisting. 
+	
+	Some people think let and const are not 
+	hoisted. In reality, they are hoisted, but they remain uninitialized until their declaration line.
+
+	Others 	think hoisting moves code to the top. That is not true; the JavaScript engine only creates memory 
+	bindings for variables and functions during setup.
+
+	Another misconception is that function 
+	expressions are hoisted like function declarations. Only function declarations are hoisted with their 
+	body ready. Function expressions or arrow functions depend on whether the variable is declared 
+	using var, let, or const.
+
+	Finally, var is sometimes used in loops with asynchronous code, which often 
+	causes bugs because all iterations share the same variable. It is better to use let in such cases.
+ */
+
+        // Hoisting of Variables ?
+		
+		Var Hoisting
+		
+		console.log(name); // undefined
+		var name = "Jayesh";
+		console.log(name); // Jayesh
+		
+		Explanation:  
+		var declarations are hoisted. Only the declaration is moved up, not the assignment. So name exists but starts as undefined.
+		
+		Let Hoisting
+		
+		console.log(age); // ReferenceError
+		let age = 24;
+		console.log(age); // 24
+		
+		Explanation:  
+		let is hoisted but kept in the Temporal Dead Zone (TDZ) until initialized. Access before declaration → ReferenceError.
+		
+		
+        // let and const variables ( Temporal Dead Zone :- Technically they are also hoisted )
+		
+		/* Temporal Dead Zone :
+
+		The Temporal Dead Zone is the period between the start of a function or block execution
+		and the point where a let or const variable is initialized.*/
+	
+        // let and const are allocated in diffrent memory space ( script scope ) than global scope
+		
+		Const Hoisting
+		
+		console.log(language); // ReferenceError
+		const language = "JavaScript";
+		console.log(language); // JavaScript
+		
+		Explanation:  
+		Same as let, but const must be initialized at declaration.
+
+		Global Variable
+		
+		console.log(a); // ReferenceError
+		a = 4;
+		console.log(a); // 4
+		
+		Explanation:  
+		Assigning without var/let/const creates a global property, but it’s not hoisted.
+
+
+        // Hoisting of functions ?
+
+        // case 1:- function declaration
+		
+        displayName(); // Jc
+        
+        function displayName() {
+            console.log("Jc");
+        }
+        displayName(); // Jc
+
+        // case 2:- function expression
+		
+        // with "var" keyword
+		
+        getName(); // Uncaught TypeError: getName is not a function ( getName is undefined here )
+        var getName = function () {
+            console.log("Jayesh");
+        };
+        getName(); // Jayesh
+
+        // with "let" or "const" keyword
+		
+        getNameTDZ(); // Uncaught ReferenceError: Cannot access 'getNameTDZ' before initialization
+        const getNameTDZ = function () {
+            console.log("Jayesh");
+        };
+        getNameTDZ(); // Jayesh
+
+        // case 3:- Arrow function ( similar to function expression )
+		
+        // with "var" keyword
+		
+        getNameArrow(); // Uncaught TypeError: getNameArrow is not a function ( getNameArrow is undefined here )
+        var getNameArrow = () => {
+            console.log("Jayesh");
+        };
+        getNameArrow(); // Jayesh
+
+        // with "let" or "const" keyword
+		
+        getNameArrowTDZ(); // Uncaught ReferenceError: Cannot access 'getNameArrowTDZ' before initialization
+        const getNameArrowTDZ = () => {
+            console.log("Jayesh");
+        };
+        getNameArrowTDZ(); // Jayesh
+
+        // Hoisting of Classes ?
+
+        // case 1:- class declaration
+
+        // var jayesh = new Person("jayesh", 24); // Uncaught ReferenceError: Cannot access 'Person' before initialization ( TDZ )
+
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        const jc = new Person("jc", 24);
+        console.log(jc); // Person { name: 'jc', age: 24 }
+
+        // case 2:- class expression
+
+        // with "var" keyword
+        var viru = new Player("viru"); // Uncaught TypeError: Player is not a constructor ( Player is undefined here )
+
+        var Player = class {
+            constructor(name) {
+                this.name = name;
+            }
+        };
+
+        var virat = new Player("virat");
+        console.log(virat); // Player { name: 'virat' }
+
+        // with "let" or "const" keyword
+
+        const meow = new Animal("meow"); // Uncaught ReferenceError: Cannot access 'Animal' before initialization ( TDZ )
+
+        const Animal = class {
+            constructor(name) {
+                this.name = name;
+            }
+        };
+
+        const cat = new Animal("cat");
+        console.log(cat); // Animal { name: 'cat' }
+
+    </script>
+</body>
+
+</html>

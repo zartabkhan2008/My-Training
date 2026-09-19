@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 01  Map function
+
+        // It is basically used to transform a array. The map() method creates a new array with the results of calling a  function for every array element.
+
+        const arr = [5, 1, 3, 2, 6];
+
+        // Task 1: Double the array element: [10, 2, 6, 4, 12]
+
+
+        function double(x) {
+            return 2 * x;
+        }
+        const doubleArr = arr.map(double);
+        console.log(doubleArr);
+
+        // Task 2: Triple the array element
+
+        function triple(x) {
+
+            return 3 * x;
+        }
+        const tirpleArr = arr.map(triple);
+        console.log(tirpleArr);
+
+        // 02 Filter function
+
+        // Filter function is basically used to filter the value inside an array. The arr.filter() method is used to create a
+        // new array from a given array consisting of only those elements from the given array which satisfy a
+        // condition set by the argument method
+
+        // Filter function creates an array and store only those values which evaluates to true.
+
+
+        const array = [1, 2, 3, 4, 5, 6];
+
+        function isOdd(x) {
+
+            return x % 2;
+        }
+
+        const OddArr = array.filter(isOdd);
+        console.log(OddArr);
+
+        // other way
+        const OddArrr = array.filter((x) => x % 2);
+
+        //03  Reduce function
+
+        // It is a function which take all the values of array and gives a single output of it. It reduces the array to give a
+
+
+        const aarray = [5, 1, 3, 2, 6];
+
+        // Calculate sum of elements of array - Non functional programming way
+
+        function findSum(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum = sum + arr[i];
+            }
+            return sum;
+        }
+        console.log(findSum(aarray)); // 17
+
+
+        // reduce function way
+
+        const sumOfElem = arr.reduce(function (accumulator, current) {
+
+            // current represent the value of array
+            // accumulator is used the result from element of array.
+            // In comparison to previous code snippet, *sum* variable is *accumulator* and *arr[i]* is *current*
+            accumulator = accumulator + current;
+            return accumulator;
+        }, 0); //In above example sum was initialized with 0, so over here accumulator also needs to be initialized, so the second argument to reduce function represent the initialization value.
+        console.log(sumOfElem); // 17
+
+        // find max inside array: Non functional programming way:
+        const arrayy = [5, 1, 3, 2, 6];
+        function findMax(arr) {
+            let max = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i]
+                }
+            }
+            return max;
+        }
+        console.log(findMax(arrayy)); // 6
+
+        // reduce way
+
+
+
+
+        // Tricky MAP
+
+
+        const users = [
+            { firstName: "Alok", lastName: "Raj", age: 23 },
+            { firstName: "Ashish", lastName: "Kumar", age: 29 },
+            { firstName: "Ankit", lastName: "Roy", age: 29 },
+            { firstName: "Pranav", lastName: "Mukherjee", age: 50 },
+        ];
+
+        // Get array of full name : ["Alok Raj", "Ashish Kumar", ...]
+        const fullNameArr = users.map((user) => user.firstName + " " +
+            user.lastName);
+        console.log(fullNameArr); // ["Alok Raj", "Ashish Kumar", ...]
+
+        // Get the count/report of how many unique people with unique age are
+        there
+        // like: {29 : 2, 75 : 1, 50 : 1}
+        // We should use reduce, why? we want to deduce some information from the array. Basically we want to get a single object as output
+        const report = users.reduce((acc, curr) => {
+            if (acc[curr.age]) {
+                acc[curr.age] = ++acc[curr.age];
+            } else {
+                acc[curr.age] = 1;
+            }
+        }, {})
+        console.log(report) // {29 : 2, 75 : 1, 50 : 1}
+
+        // Function Chaining
+
+        // First name of all people whose age is less than 30
+        const useras = [
+            { firstName: "Alok", lastName: "Raj", age: 23 },
+            { firstName: "Ashish", lastName: "Kumar", age: 29 },
+            { firstName: "Ankit", lastName: "Roy", age: 29 },
+            { firstName: "Pranav", lastName: "Mukherjee", age: 50 },
+        ];
+
+        // function chaining
+
+        const outputt = users.filter((user) => user.age < 30).map(user =>
+            user.firstName);
+        console.log(outputt); // ["Alok", "Ashish", "Ankit"]
+
+        // Homework challenge: Implement the same logic using reduce
+
+        const outpput = users.reduce((acc, curr) => {
+            if (curr.age < 30) {
+                acc.push(curr.firstName)
+            }
+            return acc;
+        }, []);
+        console.log(outpput); // ["Alok", "Ashish", "Ankit"]
+
+        const students = [
+            { name: "Aisha", score: 85 },
+            { name: "Bilal", score: 92 },
+            { name: "Chirag", score: 68 }
+        ];
+
+        // find()
+
+        // Purpose: Returns the first element in an array that satisfies a given condition.
+        // Returns: The matching element or undefined if no match is found.
+        // Does not return multiple matches — only the first one.
+
+        // Find the first student who scored above 90
+
+        const topStudent = students.find(student => student.score > 90);
+
+        console.log(topStudent); // { name: "Bilal", score: 92 }
+
+        // some()
+
+        // Purpose: Tests whether at least one element in the array passes the condition implemented by the callback function.
+        // Returns: A boolean — true if any element satisfies the condition, otherwise false.
+
+        const scores = [45, 60, 32, 80, 90];
+
+        // Check if any score is above 75
+        const hasTopper = scores.some(score => score > 75);
+
+        console.log(hasTopper); // true
+
+        // every() method
+
+        //Purpose: Tests whether all elements in an array pass the condition implemented by the callback function.
+        // Returns: A boolean — true if every element satisfies the condition, otherwise false.
+
+        const scorees = [85, 92, 78, 88];
+
+        // Check if all scores are above 75
+        const allPassed = scorees.every(score => score > 75);
+
+        console.log(allPassed); // true
+
+    </script>
+</body>
+
+</html>
